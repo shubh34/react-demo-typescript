@@ -4,12 +4,16 @@
   "private": true,
   "dependencies": {
     "@types/jest": "24.0.17",
+    "@types/lodash": "^4.14.136",
     "@types/node": "12.7.2",
     "@types/react": "16.9.1",
     "@types/react-dom": "16.8.5",
+    "@types/semantic-ui": "^2.2.7",
+    "lodash": "^4.17.15",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1",
+    "semantic-ui-react": "^0.87.3",
     "typescript": "3.5.3"
   },
   "scripts": {
@@ -32,5 +36,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.10.3",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.4.0"
   }
 }
