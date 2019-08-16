@@ -8,11 +8,17 @@
     "@types/node": "12.7.2",
     "@types/react": "16.9.1",
     "@types/react-dom": "16.8.5",
+    "@types/react-redux": "^7.1.2",
     "@types/semantic-ui": "^2.2.7",
+    "@types/uuid": "^3.4.5",
     "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "node-uuid": "^1.4.8",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-redux": "^7.1.0",
     "react-scripts": "3.1.1",
+    "redux": "^4.0.4",
     "semantic-ui-react": "^0.87.3",
     "typescript": "3.5.3"
   },
@@ -47,6 +53,7 @@
     "@types/enzyme-adapter-react-16": "^1.0.5",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
-    "enzyme-to-json": "^3.4.0"
+    "enzyme-to-json": "^3.4.0",
+    "redux-devtools-extension": "^2.13.8"
   }
 }
