@@ -5,10 +5,8 @@ import { IRootState } from '../../store';
 import { addBlog } from '../../states/blogs/action';
 import moment from 'moment' ;
 import { Dispatch } from 'redux';
-import { Link } from 'react-router-dom';
 import { getBlogList } from '../../states/blogs/selectors';
 import Blog from '../sharedComponents/Blog/Blog';
-import { IBlog } from '../../states/blogs/types';
 import { Button } from 'semantic-ui-react';
 
 const mapState = (state :IRootState) => ({

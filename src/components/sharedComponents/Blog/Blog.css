@@ -14,9 +14,12 @@
     justify-content: space-between;
     word-break: "break-word";
 }
-.blog_delete_button {
+#blog_delete_button {
     color: #4183c4;
-    background: transparent important!;
+    background: transparent;
+}
+#blog_delete_button:hover {
+    color: #ff0000ba;;
 }
 
 @media only screen and (min-width: 768px) {
