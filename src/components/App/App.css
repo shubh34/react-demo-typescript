@@ -1,9 +1,12 @@
 .App {
   background-color: #eeeeee;
   color: #4183c4;
-  height: 500px;
+  height: 1000px;
   margin: 0 auto;
   box-shadow: 0px 5px 5px 5px #EEE
+}
+.page_container {
+  padding : 100px 16px;
 }
 @media only screen and (min-width: 1280px) {
   .App {

@@ -1,13 +1,13 @@
 import React from 'react';
 
 interface SectionHeaderProps {
-    name: string,
+  header: string,
     className ?: string,
 }
-const SectionHeader: React.FC<SectionHeaderProps> = ({name, className = ''}) => {
+const SectionHeader: React.FC<SectionHeaderProps> = ({header, className = ''}) => {
   return (
    <h2 className={className} >
-       {name}
+       {header}
     </h2>
   );
 }

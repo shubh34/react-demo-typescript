@@ -1,20 +1,24 @@
+import './BlogsListing.css';
 import React from 'react';
 import { connect } from 'react-redux';
-import { stat } from 'fs';
 import { IRootState } from '../../store';
 import { addBlog } from '../../states/blogs/action';
 import moment from 'moment' ;
 import { Dispatch } from 'redux';
+import { Link } from 'react-router-dom';
+import { getBlogList } from '../../states/blogs/selectors';
+import Blog from '../sharedComponents/Blog/Blog';
+import { IBlog } from '../../states/blogs/types';
+import { Button } from 'semantic-ui-react';
 
 const mapState = (state :IRootState) => ({
-  blogs: state.blogs.blogs,
+  blogs: getBlogList(state),
 })
 const mapDispatch = (dispatch: Dispatch) => ({
   addBlog: () => dispatch(addBlog({
     id: '2',
     title: 'New Blog',
-    createdDate: moment(),
-    lastUpdate: moment(),
+    date: moment(),
     categories: ["Food", "Travel"],
     content: 'Test'
 } ))
@@ -25,15 +29,19 @@ interface WelcomeProps {
   name? : string
 }
  
-const BlogsListing: React.FC<ReduxType & WelcomeProps> = (props) => {
+const BlogsListing: React.FC<ReduxType & WelcomeProps> = ({ blogs, addBlog}) => {
   const onClick = () =>  {
-    props.addBlog();
+    addBlog();
   }
   return (
-    <div>Blog Listing   {props.name}
-      <button onClick={onClick}>Add Blog  </button>
+    <div>Blog Listing
+    
+        {blogs.map( (blog :any) => <Blog blog={blog} /> )}
+ 
+      <Button onClick={onClick}>Add Blog</Button>
     </div>
   );
 }
 
 export default connect(mapState,mapDispatch) (BlogsListing);
+

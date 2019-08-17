@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import 'semantic-ui-css/semantic.min.css';
 import './App.css';
 import store from '../../store';
@@ -15,12 +15,14 @@ const App: React.FC = () => {
       <Router>
         <div className="App">
           <PageHeader />
+          <div className="page_container">
           <Switch>
             <Route exact path="/" component={BlogsListing} />
-            <Route exact path="/addBlog" component={CreateBlog} />
-            <Route exact path="/viewBlog/:id" component={ViewBlog} />
+            <Route path="/addBlog" component={CreateBlog} />
+            <Route path="/viewBlog/:id" component={ViewBlog} />
             <Route component={BlogsListing} />
           </Switch>
+          </div>
         </div>
       </Router>
     </Provider>
