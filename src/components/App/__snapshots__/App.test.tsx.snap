@@ -17,42 +17,44 @@ exports[`renders without crashing 1`] = `
       className="App"
     >
       <PageHeader />
-      <Switch>
-        <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.memo),
-              "WrappedComponent": [Function],
-              "compare": null,
-              "displayName": "Connect(BlogsListing)",
-              "type": [Function],
+      <div
+        className="page_container"
+      >
+        <Switch>
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(BlogsListing)",
+                "type": [Function],
+              }
             }
-          }
-          exact={true}
-          path="/"
-        />
-        <Route
-          component={[Function]}
-          exact={true}
-          path="/addBlog"
-        />
-        <Route
-          component={[Function]}
-          exact={true}
-          path="/viewBlog/:id"
-        />
-        <Route
-          component={
-            Object {
-              "$$typeof": Symbol(react.memo),
-              "WrappedComponent": [Function],
-              "compare": null,
-              "displayName": "Connect(BlogsListing)",
-              "type": [Function],
+            exact={true}
+            path="/"
+          />
+          <Route
+            component={[Function]}
+            path="/addBlog"
+          />
+          <Route
+            component={[Function]}
+            path="/viewBlog/:id"
+          />
+          <Route
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(BlogsListing)",
+                "type": [Function],
+              }
             }
-          }
-        />
-      </Switch>
+          />
+        </Switch>
+      </div>
     </div>
   </BrowserRouter>
 </Provider>
