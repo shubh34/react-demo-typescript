@@ -15,12 +15,20 @@ export const addBlog = (blog: IBlog) => {
     }
 }
 
-addBlog({
-    id: '2',
-    title: 'New Blog',
-    createdDate: moment(),
-    lastUpdate: moment(),
-    categories: ["Food", "Travel"],
-    content: 'Test'
-})
+export const deleteBlog = (blogId: string) => {
+    return {
+        type: DELETE_BLOG,
+        blogId: blogId,
+    }
+}
+
+export const edit_blog = (blog: IBlog) => {
+    return {
+        type: EDIT_BLOG,
+        blog,
+    }
+}
+
+
+
 
