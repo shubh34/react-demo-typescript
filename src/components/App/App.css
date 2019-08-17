@@ -1,8 +1,13 @@
 .App {
-  text-align: center;
   background-color: #eeeeee;
-  border: 2px solid;
-  max-width: 75%;
+  color: #4183c4;
   height: 500px;
   margin: 0 auto;
+  box-shadow: 0px 5px 5px 5px #EEE
 }
+@media only screen and (min-width: 1280px) {
+  .App {
+    max-width: 1280px
+  }
+}
+
