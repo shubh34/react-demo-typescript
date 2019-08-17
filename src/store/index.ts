@@ -1,5 +1,3 @@
-
-
 import { createStore } from 'redux';
 import reducers from './reducers';
 import moment from 'moment';
@@ -25,13 +23,10 @@ export const blogState: IBlogsState =  {
 ]
 }
 export interface IRootState {
-    blogs: import('../states/blogs/types').IBlogsState
+	blogs: import('../states/blogs/types').IBlogsState;
 }
 const store = () => {
-    const composedEnhancers = composeWithDevTools();
-    return createStore<IRootState, any, any, any>(
-        reducers, {blogs: blogState},
-        composedEnhancers
-    );
-}
+	const composedEnhancers = composeWithDevTools();
+	return createStore<IRootState, any, any, any>(reducers, { blogs: blogState }, composedEnhancers);
+};
 export default store;

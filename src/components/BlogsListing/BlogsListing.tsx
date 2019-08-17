@@ -42,4 +42,3 @@ const BlogsListing: React.FC<ReduxType & WelcomeProps> = ({ blogs, addBlog}) => 
 }
 
 export default connect(mapState,mapDispatch) (BlogsListing);
-
