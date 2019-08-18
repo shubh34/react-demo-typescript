@@ -19,7 +19,7 @@ const App: React.FC = () => {
 						<Switch>
 							<Route exact path='/' component={BlogsListing} />
 							<Route path='/addBlog' component={CreateBlog} />
-							<Route path='/viewBlog/:id' component={ViewBlog} />
+							<Route exact path='/viewBlog/:id' component={ViewBlog} />
 							<Route component={BlogsListing} />
 						</Switch>
 					</div>

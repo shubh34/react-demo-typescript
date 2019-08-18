@@ -9,54 +9,55 @@ interface ICategories {
 	deleteCategory: Function;
 }
 interface IState {
-    category: string;
+	category: string;
 }
 export class Categories extends Component<ICategories, IState> {
 	constructor(props: ICategories) {
-		
 		super(props);
-		this.state= {
+		this.state = {
 			category: '',
-		}
+		};
 		this.handleChange = this.handleChange.bind(this);
 		this.handleKeyUp = this.handleKeyUp.bind(this);
-
 	}
 	handleChange(e: React.ChangeEvent<HTMLInputElement>) {
 		this.setState({
 			category: e.target.value,
-		})
+		});
 	}
 	handleKeyUp(e: any) {
 		const key = e.keyCode;
-	
-		if ((key === ENTER_KEY || key === COMMA_KEY) && this.state.category ) {
+
+		if ((key === ENTER_KEY || key === COMMA_KEY) && this.state.category) {
 			this.props.addCategory(this.state.category);
 			this.setState({
 				category: '',
-			})
+			});
 		}
-	  }
+	}
 	render() {
-		const {categories} = this.props;
+		const { categories } = this.props;
 		return (
 			<div>
-			<Form.Field>
-				<label>Categories</label>
+				<Form.Field>
+					<label>Categories</label>
 
-				<div>{categories.map((category , index)=> 
-						<Button name={category}>{category} <Icon name="delete"></Icon></Button>
-				)}<Input
-					spellCheck
-					placeholder='Enter your content'
-					onKeyUp={this.handleKeyUp}
-					onChange={this.handleChange}
-					value={this.state.category}
-				/>
-
-				</div>
-			</Form.Field>
-		</div>
+					<div>
+						{categories.map((category, index) => (
+							<Button name={category}>
+								{category} <Icon name='delete'></Icon>
+							</Button>
+						))}
+						<Input
+							spellCheck
+							placeholder='Enter your content'
+							onKeyUp={this.handleKeyUp}
+							onChange={this.handleChange}
+							value={this.state.category}
+						/>
+					</div>
+				</Form.Field>
+			</div>
 		);
 	}
 }

@@ -47,14 +47,13 @@ const mapDispatch = (dispatch: any) => ({
 
 type ReduxType = ReturnType<typeof mapState> & ReturnType<typeof mapDispatch>;
 
-export class AddBlog extends React.Component<ReduxType & RouteComponentProps > {
+export class AddBlog extends React.Component<ReduxType & RouteComponentProps> {
 	constructor(props: any) {
 		super(props);
 		this.onFormFieldChange = this.onFormFieldChange.bind(this);
 		this.onAddCategory = this.onAddCategory.bind(this);
 		this.onCategoryDelete = this.onCategoryDelete.bind(this);
 		this.handleAddBlog = this.handleAddBlog.bind(this);
-		
 	}
 	componentWillUnmount() {
 		this.props.initAddBlogForm();
@@ -76,8 +75,8 @@ export class AddBlog extends React.Component<ReduxType & RouteComponentProps > {
 	}
 	handleAddBlog() {
 		console.log(this.props);
-		const {title, blogContent: content, categories, addBlog, history }= this.props;
-		const blog= {
+		const { title, blogContent: content, categories, addBlog, history } = this.props;
+		const blog = {
 			title,
 			content,
 			categories,
@@ -87,12 +86,7 @@ export class AddBlog extends React.Component<ReduxType & RouteComponentProps > {
 	}
 
 	render() {
-		const {
-			isFormValid,
-			title,
-			categories,
-			blogContent,
-		} = this.props;
+		const { isFormValid, title, categories, blogContent } = this.props;
 		return (
 			<div>
 				<SectionHeader header='Add New Blog' />
@@ -104,8 +98,12 @@ export class AddBlog extends React.Component<ReduxType & RouteComponentProps > {
 						addCategory={this.onAddCategory}
 						deleteCategory={deleteCategory}
 					/>
-					 <Message success header='Form Completed' content="You're all signed up for the newsletter" />
-					<Button type='submit' onClick ={this.handleAddBlog} disabled={!isFormValid}>
+					<Message
+						success
+						header='Form Completed'
+						content="You're all signed up for the newsletter"
+					/>
+					<Button type='submit' onClick={this.handleAddBlog} disabled={!isFormValid}>
 						Add Blog
 					</Button>
 				</Form>
