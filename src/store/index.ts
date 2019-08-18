@@ -3,6 +3,8 @@ import reducers from './reducers';
 import moment from 'moment';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { IBlogsState } from '../states/blogs/types';
+import { IValidationState } from '../states/validations/types';
+import { IAddBlogState } from '../states/addBlog/types';
 
 export const blogState: IBlogsState = {
 	blogs: [
@@ -25,7 +27,9 @@ export const blogState: IBlogsState = {
 	],
 };
 export interface IRootState {
-	blogs: import('../states/blogs/types').IBlogsState;
+	blogs: IBlogsState;
+	validation: IValidationState;
+	addBlog: IAddBlogState;
 }
 const store = () => {
 	const composedEnhancers = composeWithDevTools();

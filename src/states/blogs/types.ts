@@ -1,8 +1,8 @@
 import { Moment } from 'moment'
 export interface IBlog {
-    id: string,
+    id ? : string,
     categories: string [],
-    date: Moment | string,
+    date : Moment | string,
     content: string,
     title: string,
 

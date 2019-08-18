@@ -14,3 +14,12 @@ export const getBlogList = (state: IRootState) =>
             };
         });
     }
+export const getBlogById= (state: IRootState, id: string) => {
+    {
+        const blog = state.blogs.blogs.find(blog => blog.id = id);
+        return  {
+            ...blog,
+            date: moment(blog.date).format(dateFormat),
+        }
+    }
+}

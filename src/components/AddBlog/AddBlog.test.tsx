@@ -1,8 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import CreateBlog from './CreateBlog';
+import AddBlog from './AddBlog';
 
 it('renders without crashing', () => {
-	const div = shallow(<CreateBlog />);
+	const div = shallow(<AddBlog />);
 	expect(div).toMatchSnapshot();
 });
