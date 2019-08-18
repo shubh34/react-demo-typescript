@@ -1,0 +1,39 @@
+.nav {
+    background-color: white;
+    top:0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+   
+  }
+  .nav .nav_section_header {
+    padding: 16px;
+    margin : 0px
+  }
+  .nav_search_box {
+      display: none;
+     
+  }
+  .nav_link {
+    border: 2px solid;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  .nav_link:hover, .nav_link--active {
+    background-color: #4183c4;
+    color:white;
+  }
+  @media only screen and (min-width: 768px) {
+    .nav_search_box {
+        display: inline-block;
+    }
+  }
+  ul {
+    list-style-type: none;
+    padding-right:16px 
+  }
+  li {
+    display: inline-block;
+    padding: 0 8px;
+  }
