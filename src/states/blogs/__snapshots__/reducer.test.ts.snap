@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reducer selector should add a blog on addBlog action 1`] = `
+Object {
+  "blogs": Array [
+    Object {
+      "categories": Array [
+        "Food",
+        "Travel",
+      ],
+      "content": "Lorem ipsum .",
+      "date": "2019-01-19T00:00:00.000Z",
+      "id": "15",
+      "title": "Food Blog",
+    },
+    Object {
+      "categories": Array [
+        "Food",
+        "Travel",
+      ],
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo.",
+      "date": "2019-01-19T00:00:00.000Z",
+      "id": "1122",
+      "title": "Food Blog",
+    },
+  ],
+}
+`;

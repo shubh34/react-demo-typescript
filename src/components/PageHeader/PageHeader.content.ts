@@ -6,7 +6,7 @@ export type contentType = {
 const content : contentType = {
     pageHeaderTitle: 'My Blogs',
     homeHeaderTitle: 'Home',
-    addBlogHeaderTitle: 'Add New Blog'
+    addBlogHeaderTitle: 'Add Blog'
 
 }
 

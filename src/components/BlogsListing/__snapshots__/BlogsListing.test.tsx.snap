@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+Object {
+  "props": Object {
+    "addBlog": [MockFunction],
+    "blogs": Array [
+      Object {
+        "categories": Array [
+          "Food",
+          "Travel",
+        ],
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+        "date": "21 Jan 2019",
+        "id": "1",
+        "readMore": true,
+        "title": "Food Blog",
+      },
+      Object {
+        "categories": Array [
+          "Dance",
+          "Learning",
+        ],
+        "content": "Lorem ipsumutpat consequat mus.",
+        "date": "22 Jan 2019",
+        "id": "2",
+        "readMore": false,
+        "title": "Dance Blog",
+      },
+    ],
+    "deleteBlog": [MockFunction],
+  },
+  "wrapper": <div>
+    Blog Listing
+    <Blog
+      blog={
+        Object {
+          "categories": Array [
+            "Food",
+            "Travel",
+          ],
+          "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+          "date": "21 Jan 2019",
+          "id": "1",
+          "readMore": true,
+          "title": "Food Blog",
+        }
+      }
+      deleteBlog={[MockFunction]}
+    />
+    <Blog
+      blog={
+        Object {
+          "categories": Array [
+            "Dance",
+            "Learning",
+          ],
+          "content": "Lorem ipsumutpat consequat mus.",
+          "date": "22 Jan 2019",
+          "id": "2",
+          "readMore": false,
+          "title": "Dance Blog",
+        }
+      }
+      deleteBlog={[MockFunction]}
+    />
+    <Button
+      as="button"
+      onClick={[Function]}
+    >
+      Add Blog
+    </Button>
+  </div>,
+}
+`;

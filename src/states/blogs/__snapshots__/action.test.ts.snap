@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`blogs action should create add blog action 1`] = `
+Object {
+  "blog": Object {
+    "categories": Array [
+      "cat1",
+      "cat2",
+    ],
+    "content": "Content of blog",
+    "date": "2018-01-22T00:00:00.000Z",
+    "id": "2",
+    "title": "Test Blog",
+  },
+  "type": "ADD_BLOG",
+}
+`;
+
+exports[`blogs action should create edit blog action 1`] = `
+Object {
+  "blog": Object {
+    "categories": Array [
+      "cat1",
+      "cat2",
+    ],
+    "content": "Content of blog",
+    "date": "2018-01-22T00:00:00.000Z",
+    "id": "2",
+    "title": "Test Blog",
+  },
+  "type": "EDIT_BLOG",
+}
+`;
