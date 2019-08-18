@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Form, TextArea, Input } from 'semantic-ui-react';
+import { Form, Input } from 'semantic-ui-react';
 
 interface ITitleProps {
 	title: string;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Form, TextArea } from 'semantic-ui-react';
+import { Form, TextArea } from 'semantic-ui-react';
 
 interface IBlogContent {
 	blogContent: string;

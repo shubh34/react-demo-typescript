@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Input, Message, Button, Icon } from 'semantic-ui-react';
-import { deleteCategory } from '../../../states/addBlog/actions';
-import { render } from 'enzyme';
+import { Form, Input, Button, Icon } from 'semantic-ui-react';
 import { ENTER_KEY, COMMA_KEY } from '../../../configs/config';
 interface ICategories {
 	categories: string[];

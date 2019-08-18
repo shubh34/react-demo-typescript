@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button, Form, TextArea, Message } from 'semantic-ui-react';
+import { Button, Form, Message } from 'semantic-ui-react';
 import SectionHeader from '../sharedComponents/SectionHeader/SectionHeader';
 import { IRootState } from '../../store';
 import { isFormValid } from '../../states/validations/selectors';
@@ -25,7 +25,7 @@ import {
 } from '../../states/addBlog/selectors';
 import { addBlog } from '../../states/blogs/action';
 import { IBlog } from '../../states/blogs/types';
-import { RouteComponentProps, RouteProps } from 'react-router';
+import { RouteComponentProps } from 'react-router';
 
 const mapState = (state: IRootState) => ({
 	isFormValid: isFormValid(state),
