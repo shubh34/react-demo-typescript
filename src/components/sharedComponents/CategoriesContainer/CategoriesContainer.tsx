@@ -1,7 +1,5 @@
 import React from 'react';
-import { IBlog } from '../../../states/blogs/types';
-import SectionHeader from '../SectionHeader/SectionHeader';
-import { Button, Icon } from 'semantic-ui-react';
+import { Icon } from 'semantic-ui-react';
 import { getCategoriesInString } from '../../../utils/utils';
 
 interface categoriesProps {
@@ -10,10 +8,9 @@ interface categoriesProps {
 
 const CategoriesContainer: React.FC<categoriesProps> = props => {
 	const { categories } = props;
-
 	return (
 		<div>
-			<Icon name='tags' />
+			<Icon name='tags' size='small' />
 			<strong>
 				<span>{`  ${getCategoriesInString(categories)}`}</span>
 			</strong>
