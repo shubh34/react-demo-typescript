@@ -1,16 +1,14 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import './App.css';
+import './ViewBlog.css';
 import store from '../../store';
 
-const App: React.FC = () => {
+const ViewBlog: React.FC = () => {
   return (
-    <Provider store={store()}>
-      <div className="App">
-        
+      <div>
+          View Blog
       </div>
-    </Provider>
   );
 }
 
-export default App;
+export default ViewBlog;
