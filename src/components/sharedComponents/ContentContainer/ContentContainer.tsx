@@ -1,6 +1,4 @@
 import React from 'react';
-import { IBlog } from '../../../states/blogs/types';
-import SectionHeader from '../SectionHeader/SectionHeader';
 import { Link } from 'react-router-dom';
 
 interface contentProps {
