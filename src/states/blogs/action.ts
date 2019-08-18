@@ -1,7 +1,4 @@
-import moment from "moment";
 import { IBlog } from "./types";
-
-
 export const ADD_BLOG: string = "ADD_BLOG";
 export const EDIT_BLOG: string = "EDIT_BLOG";
 export const DELETE_BLOG: string = "DELETE_BLOG";

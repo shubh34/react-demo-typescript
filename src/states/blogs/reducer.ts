@@ -1,8 +1,5 @@
 import { IBlogsState } from "./types";
 import { ADD_BLOG, EDIT_BLOG, DELETE_BLOG } from "./action";
-import { blogState } from "../../store";
-import { statement } from "@babel/template";
-import { bindActionCreators } from "redux";
 
 const init: IBlogsState = {
     blogs: []

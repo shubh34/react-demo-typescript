@@ -2,8 +2,7 @@ import { Moment } from 'moment'
 export interface IBlog {
     id: string,
     categories: string [],
-    createdDate: Moment,
-    lastUpdate: Moment,
+    date: Moment | string,
     content: string,
     title: string,
 

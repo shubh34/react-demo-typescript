@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`blog selector should get blogList 1`] = `
+Array [
+  Object {
+    "categories": Array [
+      "Food",
+      "Travel",
+    ],
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa tincidunt nunc pulvinar sapien et ligula. Amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Blandit aliquam etiam erat velit scelerisque in. Phasellu",
+    "date": "19 Jan 2019",
+    "id": "1",
+    "readMore": true,
+    "title": "Food Blog",
+  },
+  Object {
+    "categories": Array [
+      "Dance",
+      "Learning",
+    ],
+    "content": "Lorem ipsumutpat consequat mus.",
+    "date": "20 Jan 2019",
+    "id": "2",
+    "readMore": false,
+    "title": "Dance Blog",
+  },
+]
+`;
