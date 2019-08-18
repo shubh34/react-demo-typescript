@@ -2,7 +2,7 @@ import './Blog.css';
 import React from 'react';
 import { IBlog } from '../../../states/blogs/types';
 import SectionHeader from '../SectionHeader/SectionHeader';
-import { Button, Icon, Label } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 import ContentContainer from '../ContentContainer/ContentContainer';
 import CategoriesContainer from '../CategoriesContainer/CategoriesContainer';
 import { Link } from 'react-router-dom';

@@ -8,9 +8,14 @@
 .page_container {
   padding : 100px 16px;
 }
+
 @media only screen and (min-width: 1280px) {
   .App {
     max-width: 1280px
   }
+  .page_container {
+    padding : 100px 124px;
+  }
+
 }
 

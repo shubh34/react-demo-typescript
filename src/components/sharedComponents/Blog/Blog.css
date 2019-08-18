@@ -24,7 +24,7 @@
 
 @media only screen and (min-width: 768px) {
     .blog {
-        padding: 24px 16px 16px 16px;
+        padding: 24px 48px;
         flex-direction:row;
     }
     .blog_date_meta {
