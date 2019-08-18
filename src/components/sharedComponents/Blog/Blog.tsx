@@ -45,7 +45,7 @@ const Blog: React.FC<blogProps> = props => {
 					/>
 				</div>
 				<ContentContainer content={content} readMore={readMore} blogId={id} />
-				<CategoriesContainer categories={categories} />
+				<CategoriesContainer categories={categories} hasTagIcon />
 			</div>
 		</div>
 	);

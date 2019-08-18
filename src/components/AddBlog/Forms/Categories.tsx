@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Form, Input, Message, Button, Icon } from 'semantic-ui-react';
-import { deleteCategory } from '../../../states/addBlog/actions';
-import { render } from 'enzyme';
 import { ENTER_KEY, COMMA_KEY } from '../../../configs/config';
+import CategoriesContainer from '../../sharedComponents/CategoriesContainer/CategoriesContainer';
+
 interface ICategories {
 	categories: string[];
 	addCategory: Function;
@@ -19,18 +19,24 @@ export class Categories extends Component<ICategories, IState> {
 			category: '',
 		}
 		this.handleChange = this.handleChange.bind(this);
+		this.handleDeleteCategory = this.handleDeleteCategory.bind(this);
+		
 		this.handleKeyUp = this.handleKeyUp.bind(this);
 
 	}
 	handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+		e.preventDefault();
 		this.setState({
 			category: e.target.value,
 		})
 	}
+	handleDeleteCategory(category: string) {
+		this.props.deleteCategory(category);
+	}
 	handleKeyUp(e: any) {
 		const key = e.keyCode;
 	
-		if ((key === ENTER_KEY || key === COMMA_KEY) && this.state.category ) {
+		if ((key === ENTER_KEY || key === COMMA_KEY) && this.state.category.trim() ) {
 			this.props.addCategory(this.state.category);
 			this.setState({
 				category: '',
@@ -43,19 +49,17 @@ export class Categories extends Component<ICategories, IState> {
 			<div>
 			<Form.Field>
 				<label>Categories</label>
-
-				<div>{categories.map((category , index)=> 
-						<Button name={category}>{category} <Icon name="delete"></Icon></Button>
-				)}<Input
+				{!!categories.length && <CategoriesContainer categories={categories} hasDeleteIcon onCategoryClick={this.handleDeleteCategory}/>}
+				<Input
 					spellCheck
 					placeholder='Enter your content'
-					onKeyUp={this.handleKeyUp}
+					onKeyDown={this.handleKeyUp}
+					
 					onChange={this.handleChange}
 					value={this.state.category}
-				/>
-
-				</div>
+				/>	
 			</Form.Field>
+			
 		</div>
 		);
 	}

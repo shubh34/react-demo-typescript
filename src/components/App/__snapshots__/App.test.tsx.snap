@@ -35,11 +35,28 @@ exports[`renders without crashing 1`] = `
             path="/"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(AddBlog)",
+                "type": [Function],
+              }
+            }
             path="/addBlog"
           />
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(ViewBlog)",
+                "type": [Function],
+              }
+            }
+            exact={true}
             path="/viewBlog/:id"
           />
           <Route

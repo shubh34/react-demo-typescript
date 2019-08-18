@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button, Form, TextArea, Message } from 'semantic-ui-react';
+import { Button, Form} from 'semantic-ui-react';
 import SectionHeader from '../sharedComponents/SectionHeader/SectionHeader';
 import { IRootState } from '../../store';
 import { isFormValid } from '../../states/validations/selectors';
@@ -52,7 +52,7 @@ export class AddBlog extends React.Component<ReduxType & RouteComponentProps> {
 		super(props);
 		this.onFormFieldChange = this.onFormFieldChange.bind(this);
 		this.onAddCategory = this.onAddCategory.bind(this);
-		this.onCategoryDelete = this.onCategoryDelete.bind(this);
+		this.onDeleteCategory = this.onDeleteCategory.bind(this);
 		this.handleAddBlog = this.handleAddBlog.bind(this);
 	}
 	componentWillUnmount() {
@@ -69,9 +69,9 @@ export class AddBlog extends React.Component<ReduxType & RouteComponentProps> {
 			this.props.updateValidation('categories', true);
 		}
 	}
-	onCategoryDelete(category: string) {
+	onDeleteCategory(category: string) {
 		this.props.deleteCategory(category);
-		this.props.updateValidation('categories', this.props.categories.length === 1);
+		this.props.updateValidation('categories', this.props.categories.length > 1);
 	}
 	handleAddBlog() {
 		console.log(this.props);
@@ -90,20 +90,15 @@ export class AddBlog extends React.Component<ReduxType & RouteComponentProps> {
 		return (
 			<div>
 				<SectionHeader header='Add New Blog' />
-				<Form success>
+				<Form>
 					<Title title={title} onChange={this.onFormFieldChange} />
 					<BlogContent blogContent={blogContent} onChange={this.onFormFieldChange} />
 					<Categories
 						categories={categories}
 						addCategory={this.onAddCategory}
-						deleteCategory={deleteCategory}
+						deleteCategory={this.onDeleteCategory}
 					/>
-					<Message
-						success
-						header='Form Completed'
-						content="You're all signed up for the newsletter"
-					/>
-					<Button type='submit' onClick={this.handleAddBlog} disabled={!isFormValid}>
+					<Button id="add-blog" type="button" onClick={this.handleAddBlog} disabled={!isFormValid}>
 						Add Blog
 					</Button>
 				</Form>
