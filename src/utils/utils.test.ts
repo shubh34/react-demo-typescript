@@ -1,8 +1,6 @@
-import {getCategoriesInString}  from './utils';
+import { getCategoriesInString } from './utils';
 describe('Utils', () => {
-
-    it('getCategoriesInString', () => {
-        expect(getCategoriesInString(['Food', 'Travel'])).toBe('Food, Travel');
-    });
-    
+	it('getCategoriesInString', () => {
+		expect(getCategoriesInString(['Food', 'Travel'])).toBe('Food, Travel');
+	});
 });

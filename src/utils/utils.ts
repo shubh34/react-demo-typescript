@@ -1,3 +1,3 @@
-export const getCategoriesInString = (categories : string[]) => {
-    return categories.join(', ');
-}
+export const getCategoriesInString = (categories: string[]) => {
+	return categories.join(', ');
+};
