@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 interface contentProps {
-	blogId ? : string;
+	blogId?: string;
 	content: string;
 	readMore: boolean;
 	className?: string;
