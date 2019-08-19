@@ -1,6 +1,7 @@
+import './AddBlog.css';
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button, Form, TextArea, Message } from 'semantic-ui-react';
+import { Button, Form } from 'semantic-ui-react';
 import SectionHeader from '../sharedComponents/SectionHeader/SectionHeader';
 import { IRootState } from '../../store';
 import { isFormValid } from '../../states/validations/selectors';
@@ -9,9 +10,9 @@ import {
 	updateValidation,
 	resetValidation,
 } from '../../states/validations/actions';
-import Title from './Forms/Title';
-import Categories from './Forms/Categories';
-import BlogContent from './Forms/BlogContent';
+import Title from './Forms/FormTitle';
+import Categories from './Forms/FormCategories';
+import BlogContent from './Forms/FormBlogContent';
 import {
 	initAddBlogForm,
 	updateFormField,
@@ -25,7 +26,7 @@ import {
 } from '../../states/addBlog/selectors';
 import { addBlog } from '../../states/blogs/action';
 import { IBlog } from '../../states/blogs/types';
-import { RouteComponentProps, RouteProps } from 'react-router';
+import { RouteComponentProps } from 'react-router';
 
 const mapState = (state: IRootState) => ({
 	isFormValid: isFormValid(state),
@@ -47,13 +48,14 @@ const mapDispatch = (dispatch: any) => ({
 
 type ReduxType = ReturnType<typeof mapState> & ReturnType<typeof mapDispatch>;
 
-export class AddBlog extends React.Component<ReduxType & RouteComponentProps> {
+export class AddBlog extends React.Component<ReduxType & RouteComponentProps > {
 	constructor(props: any) {
 		super(props);
 		this.onFormFieldChange = this.onFormFieldChange.bind(this);
 		this.onAddCategory = this.onAddCategory.bind(this);
 		this.onCategoryDelete = this.onCategoryDelete.bind(this);
 		this.handleAddBlog = this.handleAddBlog.bind(this);
+		
 	}
 	componentWillUnmount() {
 		this.props.initAddBlogForm();
@@ -75,8 +77,8 @@ export class AddBlog extends React.Component<ReduxType & RouteComponentProps> {
 	}
 	handleAddBlog() {
 		console.log(this.props);
-		const { title, blogContent: content, categories, addBlog, history } = this.props;
-		const blog = {
+		const {title, blogContent: content, categories, addBlog, history }= this.props;
+		const blog= {
 			title,
 			content,
 			categories,
@@ -86,11 +88,16 @@ export class AddBlog extends React.Component<ReduxType & RouteComponentProps> {
 	}
 
 	render() {
-		const { isFormValid, title, categories, blogContent } = this.props;
+		const {
+			isFormValid,
+			title,
+			categories,
+			blogContent,
+		} = this.props;
 		return (
-			<div>
+			<div className= "add_blog">
 				<SectionHeader header='Add New Blog' />
-				<Form success>
+				<Form>
 					<Title title={title} onChange={this.onFormFieldChange} />
 					<BlogContent blogContent={blogContent} onChange={this.onFormFieldChange} />
 					<Categories
@@ -98,12 +105,7 @@ export class AddBlog extends React.Component<ReduxType & RouteComponentProps> {
 						addCategory={this.onAddCategory}
 						deleteCategory={deleteCategory}
 					/>
-					<Message
-						success
-						header='Form Completed'
-						content="You're all signed up for the newsletter"
-					/>
-					<Button type='submit' onClick={this.handleAddBlog} disabled={!isFormValid}>
+					<Button type='submit' onClick ={this.handleAddBlog} disabled={!isFormValid}>
 						Add Blog
 					</Button>
 				</Form>

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormTitle renders without crashing 1`] = `
+<FormField>
+  <label>
+    Title
+  </label>
+  <Input
+    name="title"
+    onChange={[Function]}
+    placeholder="Enter your blog title"
+    spellCheck={true}
+    type="text"
+    value="My Blog Tiltle"
+  />
+</FormField>
+`;
