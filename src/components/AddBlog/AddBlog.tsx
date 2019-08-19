@@ -29,6 +29,7 @@ import { addBlog } from '../../states/blogs/action';
 import { IBlog } from '../../states/blogs/types';
 import { RouteComponentProps } from 'react-router';
 import content from './AddBlog.content';
+import BackButton from '../sharedComponents/BackButton/BackButton';
 
 const addButtonStyle = {
 	backgroundColor: '#4183c4',
@@ -63,6 +64,8 @@ export class AddBlog extends React.Component<ReduxType & RouteComponentProps> {
 		this.onAddCategory = this.onAddCategory.bind(this);
 		this.onDeleteCategory = this.onDeleteCategory.bind(this);
 		this.handleAddBlog = this.handleAddBlog.bind(this);
+		this.handleBack = this.handleBack.bind(this);
+		
 	}
 	componentWillUnmount() {
 		this.props.initAddBlogForm();
@@ -92,12 +95,17 @@ export class AddBlog extends React.Component<ReduxType & RouteComponentProps> {
 		addBlog(blog);
 		history.push('/');
 	}
+	handleBack() {
+		const { history } = this.props;
+		history.push('/');
+	} 
 
 	render() {
 		const { isFormValid, title, categories, blogContent } = this.props;
 		const {addBlogHeader, addBlogButtonTitle, titleLabel, categoriesLabel, blogContentLabel } = content;
 		return (
 			<div className='add_blog'>
+				<BackButton onClick={this.handleBack} />
 				<SectionHeader header={addBlogHeader} />
 				<Form>
 					<Title title={title} onChange={this.onFormFieldChange} titleLabel={titleLabel} />
