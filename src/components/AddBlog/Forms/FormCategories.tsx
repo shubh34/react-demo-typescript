@@ -51,7 +51,7 @@ export class FormCategories extends Component<IFormCategories, IState> {
 					onChange={this.handleChange}
 					value={this.state.category}
 				/>
- 				<Message visible info>*Please enter or type space to create category</Message>
+ 				<Message visible info>*Please press spacebar or enter to create category.</Message>
 				</div>
 			</Form.Field>
 			</div>
