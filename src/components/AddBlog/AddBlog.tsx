@@ -1,5 +1,6 @@
 import './AddBlog.css';
 import React from 'react';
+import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { Button, Form } from 'semantic-ui-react';
 import SectionHeader from '../sharedComponents/SectionHeader/SectionHeader';
@@ -27,7 +28,7 @@ import {
 import { addBlog } from '../../states/blogs/action';
 import { IBlog } from '../../states/blogs/types';
 import { RouteComponentProps } from 'react-router';
-import { Dispatch } from 'redux';
+import content from './AddBlog.content';
 
 const mapState = (state: IRootState) => ({
 	isFormValid: isFormValid(state),
@@ -76,7 +77,6 @@ export class AddBlog extends React.Component<ReduxType & RouteComponentProps> {
 		this.props.updateValidation('categories', this.props.categories.length > 1);
 	}
 	handleAddBlog() {
-		console.log(this.props);
 		const { title, blogContent: content, categories, addBlog, history } = this.props;
 		const blog = {
 			title,
@@ -89,19 +89,21 @@ export class AddBlog extends React.Component<ReduxType & RouteComponentProps> {
 
 	render() {
 		const { isFormValid, title, categories, blogContent } = this.props;
+		const {addBlogHeader, addBlogButtonTitle, titleLabel, categoriesLabel, blogContentLabel } = content;
 		return (
 			<div className='add_blog'>
-				<SectionHeader header='Add New Blog' />
+				<SectionHeader header={addBlogHeader} />
 				<Form>
-					<Title title={title} onChange={this.onFormFieldChange} />
-					<BlogContent blogContent={blogContent} onChange={this.onFormFieldChange} />
+					<Title title={title} onChange={this.onFormFieldChange} titleLabel={titleLabel} />
+					<BlogContent blogContent={blogContent} onChange={this.onFormFieldChange} blogContentLabel={blogContentLabel} />
 					<Categories
 						categories={categories}
 						addCategory={this.onAddCategory}
 						deleteCategory={this.onDeleteCategory}
+						categoriesLabel={categoriesLabel}
 					/>
 					<Button id='add-blog' type='button' onClick={this.handleAddBlog} disabled={!isFormValid}>
-						Add Blog
+						{addBlogButtonTitle}
 					</Button>
 				</Form>
 			</div>

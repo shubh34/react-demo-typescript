@@ -3,5 +3,7 @@
 exports[`renders without crashing 1`] = `
 <h2
   className=""
-/>
+>
+  My Blog
+</h2>
 `;
