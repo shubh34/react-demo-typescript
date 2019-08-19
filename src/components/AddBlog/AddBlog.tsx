@@ -3,7 +3,7 @@ import React from 'react';
 import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { Button, Form } from 'semantic-ui-react';
-import SectionHeader from '../sharedComponents/SectionHeader/SectionHeader';
+import SectionHeader from '../../sharedComponents/SectionHeader/SectionHeader';
 import { IRootState } from '../../store';
 import { isFormValid } from '../../states/validations/selectors';
 import {
@@ -29,7 +29,7 @@ import { addBlog } from '../../states/blogs/action';
 import { IBlog } from '../../states/blogs/types';
 import { RouteComponentProps } from 'react-router';
 import content from './AddBlog.content';
-import BackButton from '../sharedComponents/BackButton/BackButton';
+import BackButton from '../../sharedComponents/BackButton/BackButton';
 
 const addButtonStyle = {
 	backgroundColor: '#4183c4',
