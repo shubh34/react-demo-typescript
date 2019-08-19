@@ -26,6 +26,7 @@ import {
 import { addBlog } from '../../states/blogs/action';
 import { IBlog } from '../../states/blogs/types';
 import { RouteComponentProps, RouteProps } from 'react-router';
+import { Dispatch } from 'redux';
 
 const mapState = (state: IRootState) => ({
 	isFormValid: isFormValid(state),
@@ -34,7 +35,7 @@ const mapState = (state: IRootState) => ({
 	blogContent: getAddBlogContent(state),
 });
 
-const mapDispatch = (dispatch: any) => ({
+const mapDispatch = (dispatch: Dispatch) => ({
 	initValidation: (name: string, isValid: boolean) => dispatch(initValidation(name, isValid)),
 	updateValidation: (name: string, isValid: boolean) => dispatch(updateValidation(name, isValid)),
 	resetValidation: () => dispatch(resetValidation()),

@@ -6,7 +6,7 @@ import SectionHeader from '../sharedComponents/SectionHeader/SectionHeader';
 
 import pageHeaderContent from './PageHeader.content';
 
-const PageHeader: React.FC<RouteComponentProps> = (props) => {
+const PageHeader: React.FC = () => {
 	const { homeHeaderTitle, addBlogHeaderTitle, pageHeaderTitle } = pageHeaderContent;
 	return (
 		<nav className='nav'>
