@@ -37,6 +37,9 @@ Will provide the test coverage
     - `store` - redux setup combine reducer and store initialisation
     - `utils` - global resuable functions
 
+## Tech Stack
+React, Redux, Typescript, Jest, Enzyme, Webpack, Prettier, Tslint 
+
 ## TO DO
 - `Search Functionality`
 - `Filter by category`
