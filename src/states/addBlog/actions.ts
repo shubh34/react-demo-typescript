@@ -21,7 +21,6 @@ export const updateFormField = (name: string, value: string) => {
 }
 
 export const addCategory = (category: string) => {
-    console.log(category);
     return {
         type: ADD_BLOG_CATEGORY,
         category,

@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { defaultState } from '../../../tests_helpers/state';
+import { defaultState } from '../../../__mock__/state';
 import { getBlogList, hasBlogId, getBlogById } from './selectors';
 
 export const state = {

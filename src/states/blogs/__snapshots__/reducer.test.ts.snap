@@ -26,3 +26,26 @@ Object {
   ],
 }
 `;
+
+exports[`Reducer selector should delete a blog on delete action 1`] = `
+Object {
+  "blogs": Array [],
+}
+`;
+
+exports[`Reducer selector should edit  blog on edit action 1`] = `
+Object {
+  "blogs": Array [
+    Object {
+      "categories": Array [
+        "Food",
+        "Travel",
+      ],
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo.",
+      "date": "2019-01-19T00:00:00.000Z",
+      "id": "15",
+      "title": "Food Blog",
+    },
+  ],
+}
+`;

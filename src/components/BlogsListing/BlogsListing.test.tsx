@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { BlogsListing } from './BlogsListing';
-import { blogListsForListing } from '../../../tests_helpers/blogs';
+import { blogListsForListing } from '../../../__mock__/blogs';
 const setUp = (setUpProps?: any, container = shallow) => {
 	const props = {
 		addBlog: jest.fn(),

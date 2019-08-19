@@ -1,6 +1,6 @@
 
 import { isFormValid } from './selectors';
-import { defaultState, formValidState } from '../../../tests_helpers/state';
+import { defaultState, formValidState } from '../../../__mock__/state';
 describe('validation selector', () => {
     it('should be false when  Form is invalid', () => {
         expect(isFormValid(defaultState)).toBe(false);
