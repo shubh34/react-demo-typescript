@@ -37,3 +37,8 @@ Will provide the test coverage
 6. `store` - redux setup combine reducer and store initialisation
 7. `utils` - global resuable functions
 
+## TO DO
+- `Search Functionality`
+- `Filter by category`
+- `Backend integration`
+
