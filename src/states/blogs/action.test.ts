@@ -1,6 +1,10 @@
 import moment from 'moment';
 import { addBlog, deleteBlog, DELETE_BLOG, ediBlog } from './action';
 
+
+Date.now = jest.fn(() => 1487076708000);
+jest.mock('node-uuid', () => ({ v1: jest.fn(() => 'uuid') }));
+
 describe('blogs action', () => {
     it('should create add blog action', () => {
         expect(addBlog({
