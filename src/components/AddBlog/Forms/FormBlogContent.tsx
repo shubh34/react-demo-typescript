@@ -4,9 +4,13 @@ import { Form, TextArea, TextAreaProps } from 'semantic-ui-react';
 interface IFormBlogContent {
 	blogContent: string;
 	onChange: Function;
-	blogContentLabel: string
+	blogContentLabel: string;
 }
-const FormBlogContent: React.FC<IFormBlogContent> = ({ blogContent, onChange, blogContentLabel }) => {
+const FormBlogContent: React.FC<IFormBlogContent> = ({
+	blogContent,
+	onChange,
+	blogContentLabel,
+}) => {
 	const onBlogChange = (e: React.FormEvent<HTMLTextAreaElement>, data: TextAreaProps) => {
 		e.preventDefault();
 		onChange('content', data.value);

@@ -25,16 +25,16 @@ export const ViewBlog: React.FC<ReduxType & RouteComponentProps> = props => {
 	if (!hasBlog) {
 		return renderNoBlogFound();
 	}
-	const handleBack = () => props.history.push("/");
+	const handleBack = () => props.history.push('/');
 
 	const { title, content, categories, date } = blogDetails!;
 	return (
-		<div className="view_blog">
-			<BackButton onClick={handleBack}/>
+		<div className='view_blog'>
+			<BackButton onClick={handleBack} />
 			<SectionHeader header={title} />
 			<DateContainer date={date} />
-			<ContentContainer className="view_blog_content" content={content} readMore={false} />
-			<CategoriesContainer  categories={categories} hasTagIcon />
+			<ContentContainer className='view_blog_content' content={content} readMore={false} />
+			<CategoriesContainer categories={categories} hasTagIcon />
 		</div>
 	);
 };

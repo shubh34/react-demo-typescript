@@ -58,14 +58,13 @@ const mapDispatch = (dispatch: Dispatch) => ({
 type ReduxType = ReturnType<typeof mapState> & ReturnType<typeof mapDispatch>;
 
 export class AddBlog extends React.Component<ReduxType & RouteComponentProps> {
-	constructor(props:any) {
+	constructor(props: any) {
 		super(props);
 		this.onFormFieldChange = this.onFormFieldChange.bind(this);
 		this.onAddCategory = this.onAddCategory.bind(this);
 		this.onDeleteCategory = this.onDeleteCategory.bind(this);
 		this.handleAddBlog = this.handleAddBlog.bind(this);
 		this.handleBack = this.handleBack.bind(this);
-		
 	}
 	componentWillUnmount() {
 		this.props.initAddBlogForm();
@@ -98,25 +97,41 @@ export class AddBlog extends React.Component<ReduxType & RouteComponentProps> {
 	handleBack() {
 		const { history } = this.props;
 		history.push('/');
-	} 
+	}
 
 	render() {
 		const { isFormValid, title, categories, blogContent } = this.props;
-		const {addBlogHeader, addBlogButtonTitle, titleLabel, categoriesLabel, blogContentLabel } = content;
+		const {
+			addBlogHeader,
+			addBlogButtonTitle,
+			titleLabel,
+			categoriesLabel,
+			blogContentLabel,
+		} = content;
 		return (
 			<div className='add_blog'>
 				<BackButton onClick={this.handleBack} />
 				<SectionHeader header={addBlogHeader} />
 				<Form>
 					<Title title={title} onChange={this.onFormFieldChange} titleLabel={titleLabel} />
-					<BlogContent blogContent={blogContent} onChange={this.onFormFieldChange} blogContentLabel={blogContentLabel} />
+					<BlogContent
+						blogContent={blogContent}
+						onChange={this.onFormFieldChange}
+						blogContentLabel={blogContentLabel}
+					/>
 					<Categories
 						categories={categories}
 						addCategory={this.onAddCategory}
 						deleteCategory={this.onDeleteCategory}
 						categoriesLabel={categoriesLabel}
 					/>
-					<Button id='add-blog' style={addButtonStyle} type='button' onClick={this.handleAddBlog} disabled={!isFormValid}>
+					<Button
+						id='add-blog'
+						style={addButtonStyle}
+						type='button'
+						onClick={this.handleAddBlog}
+						disabled={!isFormValid}
+					>
 						{addBlogButtonTitle}
 					</Button>
 				</Form>

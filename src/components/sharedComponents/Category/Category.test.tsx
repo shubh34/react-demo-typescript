@@ -15,11 +15,15 @@ describe('Category', () => {
 	it('should call onClick method', () => {
 		const onCLick = jest.fn();
 		const wrapper = shallow(<Category name='Food' hasDeleteIcon onCategoryClick={onCLick} />);
-		wrapper.find('Button').simulate('click', {
-			preventDefault: jest.fn(),
-		}, {
-			name: 'Food'
-		});
+		wrapper.find('Button').simulate(
+			'click',
+			{
+				preventDefault: jest.fn(),
+			},
+			{
+				name: 'Food',
+			}
+		);
 		expect(onCLick).toBeCalledWith('Food');
 	});
 });

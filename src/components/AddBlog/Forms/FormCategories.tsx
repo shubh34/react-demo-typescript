@@ -4,7 +4,7 @@ import { ENTER_KEY, COMMA_KEY } from '../../../configs/config';
 import CategoriesContainer from '../../sharedComponents/CategoriesContainer/CategoriesContainer';
 interface IFormCategories {
 	categories: string[];
-	categoriesLabel: string
+	categoriesLabel: string;
 	addCategory: Function;
 	deleteCategory: Function;
 }

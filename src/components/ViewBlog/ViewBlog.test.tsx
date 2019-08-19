@@ -14,8 +14,8 @@ const blogDetails = {
 const setup = (setUpProps = {}, container = shallow) => {
 	let mock: any = jest.fn();
 	let history: any = {
-		push:jest.fn(),
-	}
+		push: jest.fn(),
+	};
 	const props = {
 		hasBlog: true,
 		blogDetails,
@@ -30,11 +30,11 @@ const setup = (setUpProps = {}, container = shallow) => {
 
 describe('ViewBlog', () => {
 	it('renders without crashing', () => {
-		const {wrapper }= setup();
+		const { wrapper } = setup();
 		expect(wrapper).toMatchSnapshot();
 	});
 	it('renders Blog not found ', () => {
-		const {wrapper }= setup({hasBlog: false});
+		const { wrapper } = setup({ hasBlog: false });
 		expect(wrapper).toMatchSnapshot();
 	});
 });
