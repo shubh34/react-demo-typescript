@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Input, Message } from 'semantic-ui-react';
 import { ENTER_KEY, COMMA_KEY } from '../../../configs/config';
-import CategoriesContainer from '../../sharedComponents/CategoriesContainer/CategoriesContainer';
+import CategoriesContainer from '../../../sharedComponents/CategoriesContainer/CategoriesContainer';
 interface IFormCategories {
 	categories: string[];
 	categoriesLabel: string;

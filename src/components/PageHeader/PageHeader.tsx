@@ -2,7 +2,7 @@ import './PageHeader.css';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Icon, Search } from 'semantic-ui-react';
-import SectionHeader from '../sharedComponents/SectionHeader/SectionHeader';
+import SectionHeader from '../../sharedComponents/SectionHeader/SectionHeader';
 
 import pageHeaderContent from './PageHeader.content';
 

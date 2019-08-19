@@ -3,11 +3,11 @@ import './ViewBlog.css';
 import { IRootState } from '../../store';
 import { getBlogById, hasBlogId } from '../../states/blogs/selectors';
 import { connect } from 'react-redux';
-import SectionHeader from '../sharedComponents/SectionHeader/SectionHeader';
-import ContentContainer from '../sharedComponents/ContentContainer/ContentContainer';
-import CategoriesContainer from '../sharedComponents/CategoriesContainer/CategoriesContainer';
-import DateContainer from '../sharedComponents/DateContainer/DateContainer';
-import BackButton from '../sharedComponents/BackButton/BackButton';
+import SectionHeader from '../../sharedComponents/SectionHeader/SectionHeader';
+import ContentContainer from '../../sharedComponents/ContentContainer/ContentContainer';
+import CategoriesContainer from '../../sharedComponents/CategoriesContainer/CategoriesContainer';
+import DateContainer from '../../sharedComponents/DateContainer/DateContainer';
+import BackButton from '../../sharedComponents/BackButton/BackButton';
 import { RouteComponentProps } from 'react-router';
 const mapState = (state: IRootState, props: any) => ({
 	hasBlog: hasBlogId(state, props.match.params.id),
