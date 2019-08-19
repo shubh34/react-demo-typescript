@@ -1,6 +1,7 @@
 import moment from "moment";
+import { IBlog } from "../src/states/blogs/types";
 
-export const rawBlogLists =
+export const rawBlogLists: IBlog[] =
 [{
     id: '1',
     categories: ['Food', 'Travel'],
@@ -16,7 +17,7 @@ export const rawBlogLists =
     content: 'Lorem ipsumutpat consequat mus.'
 }];
 
-export const blogListsForListing =
+export const blogListsForListing: any =
 [{
     id: '1',
     categories: ['Food', 'Travel'],

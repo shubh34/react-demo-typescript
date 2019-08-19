@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormBlogContent renders without crashing 1`] = `
+<FormField>
+  <label>
+    Content
+  </label>
+  <TextArea
+    as="textarea"
+    name="content"
+    onChange={[Function]}
+    placeholder="Enter your content"
+    rows={25}
+    spellcheck={true}
+    value="My Blog content"
+  />
+</FormField>
+`;
