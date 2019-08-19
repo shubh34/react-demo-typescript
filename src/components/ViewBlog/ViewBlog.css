@@ -1,0 +1,14 @@
+.view_blog {
+    padding: 16px 0px 8px 0px;   
+}
+.view_blog_content > p {
+    line-height: 24px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+@media only screen and (min-width: 768px) {
+    .view_blog {
+        padding: 24px 48px;
+    }
+  }

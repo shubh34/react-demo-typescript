@@ -30,6 +30,12 @@ import { IBlog } from '../../states/blogs/types';
 import { RouteComponentProps } from 'react-router';
 import content from './AddBlog.content';
 
+const addButtonStyle = {
+	backgroundColor: '#4183c4',
+	color: '#eeeeee',
+	padding: '8px 16px',
+};
+
 const mapState = (state: IRootState) => ({
 	isFormValid: isFormValid(state),
 	title: getAddBlogTitle(state),
@@ -102,7 +108,7 @@ export class AddBlog extends React.Component<ReduxType & RouteComponentProps> {
 						deleteCategory={this.onDeleteCategory}
 						categoriesLabel={categoriesLabel}
 					/>
-					<Button id='add-blog' type='button' onClick={this.handleAddBlog} disabled={!isFormValid}>
+					<Button id='add-blog' style={addButtonStyle} type='button' onClick={this.handleAddBlog} disabled={!isFormValid}>
 						{addBlogButtonTitle}
 					</Button>
 				</Form>

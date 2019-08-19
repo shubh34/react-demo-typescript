@@ -6,6 +6,7 @@ import { Button } from 'semantic-ui-react';
 import ContentContainer from '../ContentContainer/ContentContainer';
 import CategoriesContainer from '../CategoriesContainer/CategoriesContainer';
 import { Link } from 'react-router-dom';
+import DateContainer from '../DateContainer/DateContainer';
 
 interface IBlogWithReadMore extends IBlog {
 	readMore: boolean;
@@ -26,12 +27,7 @@ const Blog: React.FC<blogProps> = props => {
 	};
 	return (
 		<div id={id} className='blog'>
-			<div className='blog_date'>
-				<label className='blog_date_label'>
-					<span className='blog_date_meta'>Date: </span>
-					<strong>{date}</strong>
-				</label>
-			</div>
+			<DateContainer date={date} />
 			<div className='blog_details'>
 				<div className='blog_detail_header'>
 					<Link to={`/viewBlog/${id}`}>

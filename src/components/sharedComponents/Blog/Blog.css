@@ -3,12 +3,7 @@
     flex-direction: column-reverse;
     padding: 16px 0px 8px 0px;
 }
-.blog_date {
-    min-width: 150px;
-}
-.blog_date_label {
-    line-height: 30px;
-}
+
 .blog_detail_header {
     display: flex;
     justify-content: space-between;
@@ -27,10 +22,7 @@
         padding: 24px 48px;
         flex-direction:row;
     }
-    .blog_date_meta {
-        display: none;
-    }
-    .blog_details {
+   .blog_details {
         flex-grow: 15;
     }
   }
