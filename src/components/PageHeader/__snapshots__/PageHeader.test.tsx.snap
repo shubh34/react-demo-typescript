@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<nav
+  className="nav"
+>
+  <SectionHeader
+    className="nav_section_header"
+    header="My Blogs"
+  />
+  <ul>
+    <li>
+      <NavLink
+        activeClassName="nav_link--active"
+        className="nav_link"
+        exact={true}
+        to="/"
+      >
+        Home
+      </NavLink>
+    </li>
+    <li>
+      <NavLink
+        activeClassName="nav_link--active"
+        className="nav_link"
+        to="/addBlog"
+      >
+        <Icon
+          as="i"
+          name="plus"
+        />
+        Add Blog
+      </NavLink>
+    </li>
+    <li
+      className="nav_search_box"
+    >
+      <Search
+        icon="search"
+        input="text"
+        loading={false}
+        minCharacters={1}
+        noResultsMessage="No results found."
+        showNoResults={true}
+      />
+    </li>
+  </ul>
+</nav>
+`;

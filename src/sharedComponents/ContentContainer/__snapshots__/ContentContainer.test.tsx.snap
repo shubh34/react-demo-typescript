@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blog renders without crashing 1`] = `
+<div>
+  <p>
+    blog content
+  </p>
+</div>
+`;
+
+exports[`Blog should render component with read more 1`] = `
+<div>
+  <p>
+    blog content
+  </p>
+</div>
+`;
