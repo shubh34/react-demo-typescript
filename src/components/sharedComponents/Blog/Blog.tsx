@@ -13,7 +13,7 @@ interface IBlogWithReadMore extends IBlog {
 
 interface blogProps {
 	blog: IBlogWithReadMore;
-	deleteBlog: any;
+	deleteBlog: Function;
 }
 
 const Blog: React.FC<blogProps> = props => {

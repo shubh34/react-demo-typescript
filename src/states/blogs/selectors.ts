@@ -2,7 +2,6 @@ import moment  from "moment";
 import { IRootState } from "../../store";
 
 import { dateFormat, maxContentCharacterLimit } from "../../configs/config";
-import { IBlog } from "./types";
 
 export const getBlogList = (state: IRootState) => 
     {
