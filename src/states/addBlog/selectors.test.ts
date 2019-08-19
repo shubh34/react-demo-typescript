@@ -1,6 +1,6 @@
 
 import { getAddBlogTitle, getAddBlogCategories, getAddBlogContent } from './selectors';
-import { defaultState } from '../../../tests_helpers/state';
+import { defaultState } from '../../../__mock__/state';
 
 describe('validation selector', () => {
     it('should be false when  Form is invalid', () => {
