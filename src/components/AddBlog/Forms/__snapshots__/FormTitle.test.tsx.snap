@@ -3,7 +3,7 @@
 exports[`FormTitle renders without crashing 1`] = `
 <FormField>
   <label>
-    Title
+    titleLabel
   </label>
   <Input
     name="title"

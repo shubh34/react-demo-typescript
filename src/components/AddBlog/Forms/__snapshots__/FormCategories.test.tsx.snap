@@ -6,35 +6,31 @@ exports[`FormCategories renders without crashing 1`] = `
 >
   <FormField>
     <label>
-      Categories
+      categoriesLabel
     </label>
-    <div>
-      <Button
-        as="button"
-        name="Travel"
-      >
-        Travel
-         
-        <Icon
-          as="i"
-          name="delete"
-        />
-      </Button>
-      <Input
-        onChange={[Function]}
-        onKeyUp={[Function]}
-        placeholder="Enter your content"
-        spellCheck={true}
-        type="text"
-        value=""
-      />
-      <Message
-        info={true}
-        visible={true}
-      >
-        *Please press spacebar or enter to create category.
-      </Message>
-    </div>
+    <CategoriesContainer
+      categories={
+        Array [
+          "Travel",
+        ]
+      }
+      hasDeleteIcon={true}
+      onCategoryClick={[Function]}
+    />
+    <Input
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder="Enter your content"
+      spellCheck={true}
+      type="text"
+      value=""
+    />
+    <Message
+      info={true}
+      visible={true}
+    >
+      *Please press spacebar or enter to create category.
+    </Message>
   </FormField>
 </div>
 `;

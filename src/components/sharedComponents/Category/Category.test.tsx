@@ -17,6 +17,8 @@ describe('Category', () => {
 		const wrapper = shallow(<Category name='Food' hasDeleteIcon onCategoryClick={onCLick} />);
 		wrapper.find('Button').simulate('click', {
 			preventDefault: jest.fn(),
+		}, {
+			name: 'Food'
 		});
 		expect(onCLick).toBeCalledWith('Food');
 	});

@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Blog should render add blog 1`] = `
+<div
+  className="add_blog"
+>
+  <SectionHeader
+    header="Add New Blog"
+  />
+  <Form
+    as="form"
+  >
+    <FormTitle
+      onChange={[Function]}
+      title="Title"
+      titleLabel="Title"
+    />
+    <FormBlogContent
+      blogContent="This is the blog content"
+      blogContentLabel="Blog Content"
+      onChange={[Function]}
+    />
+    <FormCategories
+      addCategory={[Function]}
+      categories={
+        Array [
+          "Travel",
+          "Food",
+        ]
+      }
+      categoriesLabel="Categories"
+      deleteCategory={[Function]}
+    />
+    <Button
+      as="button"
+      disabled={true}
+      id="add-blog"
+      onClick={[Function]}
+      type="button"
+    >
+       Add Blog
+    </Button>
+  </Form>
+</div>
+`;

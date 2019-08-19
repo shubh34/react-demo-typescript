@@ -3,7 +3,7 @@
 exports[`FormBlogContent renders without crashing 1`] = `
 <FormField>
   <label>
-    Content
+    blogContentLabel
   </label>
   <TextArea
     as="textarea"
