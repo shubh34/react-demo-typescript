@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import SectionHeader from '../sharedComponents/SectionHeader/SectionHeader';
 import ContentContainer from '../sharedComponents/ContentContainer/ContentContainer';
 import CategoriesContainer from '../sharedComponents/CategoriesContainer/CategoriesContainer';
+import DateContainer from '../sharedComponents/DateContainer/DateContainer';
 const mapState = (state: IRootState, props: any) => ({
 	hasBlog: hasBlogId(state, props.match.params.id),
 	blogDetails: getBlogById(state, props.match.params.id),
@@ -23,12 +24,13 @@ export const ViewBlog: React.FC<ReduxType> = props => {
 		return renderNoBlogFound();
 	}
 
-	const { title, content, categories } = blogDetails!;
+	const { title, content, categories, date } = blogDetails!;
 	return (
-		<div>
+		<div className="view_blog">
 			<SectionHeader header={title} />
-			<ContentContainer content={content} readMore={false} />
-			<CategoriesContainer categories={categories} hasTagIcon />
+			<DateContainer date={date} />
+			<ContentContainer className="view_blog_content" content={content} readMore={false} />
+			<CategoriesContainer  categories={categories} hasTagIcon />
 		</div>
 	);
 };
