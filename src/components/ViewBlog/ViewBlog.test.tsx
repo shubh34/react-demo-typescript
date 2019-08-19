@@ -10,13 +10,31 @@ const blogDetails = {
 	id: '1',
 	title: 'Food Blog',
 };
+
+const setup = (setUpProps = {}, container = shallow) => {
+	let mock: any = jest.fn();
+	let history: any = {
+		push: jest.fn(),
+	};
+	const props = {
+		hasBlog: true,
+		blogDetails,
+		history: history,
+		location: mock,
+		match: mock,
+		...setUpProps,
+	};
+	const wrapper = container(<ViewBlog {...props} />);
+	return { wrapper, props };
+};
+
 describe('ViewBlog', () => {
 	it('renders without crashing', () => {
-		const wrapper = shallow(<ViewBlog hasBlog blogDetails={blogDetails} />);
+		const { wrapper } = setup();
 		expect(wrapper).toMatchSnapshot();
 	});
 	it('renders Blog not found ', () => {
-		const wrapper = shallow(<ViewBlog hasBlog={false} blogDetails={blogDetails} />);
+		const { wrapper } = setup({ hasBlog: false });
 		expect(wrapper).toMatchSnapshot();
 	});
 });

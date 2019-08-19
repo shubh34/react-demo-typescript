@@ -17,13 +17,10 @@ const mapDispatch = (dispatch: Dispatch) => ({
 
 type ReduxType = ReturnType<typeof mapState> & ReturnType<typeof mapDispatch>;
 
-export const BlogsListing: React.FC<ReduxType> = ({
-	blogs,
-	deleteBlog,
-}) => {
+export const BlogsListing: React.FC<ReduxType> = ({ blogs, deleteBlog }) => {
 	return (
 		<div>
-			<SectionHeader header="Blogs" />
+			<SectionHeader header='Blogs' />
 			{blogs.map((blog: any) => (
 				<Blog key={blog.id} blog={blog} deleteBlog={deleteBlog} />
 			))}
