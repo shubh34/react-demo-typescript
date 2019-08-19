@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoriesContainer should Render CategoriesContainer with Category Icon 1`] = `
+Object {
+  "props": Object {
+    "categories": Array [
+      "Food",
+      "Travel",
+    ],
+    "hasTagIcon": true,
+  },
+  "wrapper": <div
+    className="categories_container"
+  >
+    <Icon
+      as="i"
+      name="tags"
+    />
+    <div
+      className="categories_button_group"
+    >
+      <Category
+        hasDeleteIcon={false}
+        key="Food"
+        name="Food"
+      />
+      <Category
+        hasDeleteIcon={false}
+        key="Travel"
+        name="Travel"
+      />
+    </div>
+  </div>,
+}
+`;
+
+exports[`CategoriesContainer should render CategoriesContainer without Category Icon 1`] = `
+Object {
+  "props": Object {
+    "categories": Array [
+      "Food",
+      "Travel",
+    ],
+    "hasTagIcon": false,
+  },
+  "wrapper": <div
+    className="categories_container"
+  >
+    <div
+      className="categories_button_group"
+    >
+      <Category
+        hasDeleteIcon={false}
+        key="Food"
+        name="Food"
+      />
+      <Category
+        hasDeleteIcon={false}
+        key="Travel"
+        name="Travel"
+      />
+    </div>
+  </div>,
+}
+`;
+
+exports[`CategoriesContainer should render category button  with deleteIcon 1`] = `
+Object {
+  "props": Object {
+    "categories": Array [
+      "Food",
+      "Travel",
+    ],
+    "hasDeleteIcon": true,
+  },
+  "wrapper": <div
+    className="categories_container"
+  >
+    <div
+      className="categories_button_group"
+    >
+      <Category
+        hasDeleteIcon={true}
+        key="Food"
+        name="Food"
+      />
+      <Category
+        hasDeleteIcon={true}
+        key="Travel"
+        name="Travel"
+      />
+    </div>
+  </div>,
+}
+`;

@@ -1,12 +1,12 @@
 import './PageHeader.css';
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, RouteComponentProps } from 'react-router-dom';
 import { Icon, Search } from 'semantic-ui-react';
 import SectionHeader from '../sharedComponents/SectionHeader/SectionHeader';
 
 import pageHeaderContent from './PageHeader.content';
 
-const PageHeader: React.FC = (props: any) => {
+const PageHeader: React.FC = () => {
 	const { homeHeaderTitle, addBlogHeaderTitle, pageHeaderTitle } = pageHeaderContent;
 	return (
 		<nav className='nav'>

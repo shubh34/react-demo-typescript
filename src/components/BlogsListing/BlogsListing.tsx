@@ -41,7 +41,6 @@ export const BlogsListing: React.FC<ReduxType & WelcomeProps> = ({
 	};
 	return (
 		<div>
-			Blog Listing
 			{blogs.map((blog: any) => (
 				<Blog key={blog.id} blog={blog} deleteBlog={deleteBlog} />
 			))}

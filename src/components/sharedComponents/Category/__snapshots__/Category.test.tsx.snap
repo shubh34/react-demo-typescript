@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Category should render Button with delete icon 1`] = `
+<Button
+  as="button"
+  content="Food"
+  icon="delete"
+  labelPosition="right"
+  name="Food"
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#4183c4",
+      "borderRadius": "48px",
+      "color": "#eeeeee",
+      "padding": "8px 16px",
+    }
+  }
+/>
+`;
+
+exports[`Category should render Button without icon 1`] = `
+<Button
+  as="button"
+  name="Food"
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#4183c4",
+      "borderRadius": "48px",
+      "color": "#eeeeee",
+      "padding": "8px 16px",
+    }
+  }
+>
+  Food
+</Button>
+`;
