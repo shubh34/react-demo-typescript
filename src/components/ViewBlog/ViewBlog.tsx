@@ -13,14 +13,16 @@ const mapState = (state : IRootState, props: any) => ({
 type ReduxType = ReturnType<typeof mapState>;
 
 export const ViewBlog: React.FC<ReduxType> = (props) => {
+	const {blogDetails, hasBlog} = props;
+	
 	const renderNoBlogFound = () => {
 		return <div> No Blog found</div>
 	}
-	if(!hasBlogId) {
+	
+	if(!hasBlog) {
 		return renderNoBlogFound();
 	}
 
-	const {blogDetails} = props;
 	const {title, content, categories } = blogDetails!
 	return <div>
 		<SectionHeader header={title}> </SectionHeader>
