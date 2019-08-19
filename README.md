@@ -29,4 +29,19 @@ Will provide the test coverage
 - `build`: production build of application.
 - `coverage`: output folder for generated code coverage reports.
 - `src`: source code of project.
--- `components`: 
+    - `components`- list of all components. Each component has its own css and test file.
+    - `configs` - configuration properties.
+    - `constants` - string constants.
+    - `sharedComponents` - resuable components. Each resuable component has its own css and test file.
+    - `states` - reducers states that includes action, selector, reducerand their tests
+    - `store` - redux setup combine reducer and store initialisation
+    - `utils` - global resuable functions
+
+## Tech Stack
+React, Redux, Typescript, Jest, Enzyme, Webpack, Prettier, Tslint 
+
+## TO DO
+- `Search Functionality`
+- `Filter by category`
+- `Backend integration`
+
