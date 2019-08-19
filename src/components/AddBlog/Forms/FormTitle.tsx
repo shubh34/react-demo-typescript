@@ -3,15 +3,16 @@ import { Form, Input } from 'semantic-ui-react';
 
 interface IFormTitle {
 	title: string;
+	titleLabel: string;
 	onChange: Function;
 }
-const FormTitle: React.FC<IFormTitle> = ({ title, onChange }) => {
+const FormTitle: React.FC<IFormTitle> = ({ title, onChange, titleLabel }) => {
 	const onTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		onChange(e.target.name, e.target.value);
 	};
 	return (
 		<Form.Field>
-			<label>Title</label>
+			<label>{titleLabel}</label>
 			<Input
 				spellCheck
 				type='text'

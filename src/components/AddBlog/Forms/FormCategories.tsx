@@ -4,6 +4,7 @@ import { ENTER_KEY, COMMA_KEY } from '../../../configs/config';
 import CategoriesContainer from '../../sharedComponents/CategoriesContainer/CategoriesContainer';
 interface IFormCategories {
 	categories: string[];
+	categoriesLabel: string
 	addCategory: Function;
 	deleteCategory: Function;
 }
@@ -41,11 +42,11 @@ export class FormCategories extends Component<IFormCategories, IState> {
 		}
 	}
 	render() {
-		const { categories } = this.props;
+		const { categories, categoriesLabel } = this.props;
 		return (
 			<div className='form-categories'>
 				<Form.Field>
-					<label>Categories</label>
+					<label>{categoriesLabel}</label>
 					{!!categories.length && (
 						<CategoriesContainer
 							categories={categories}

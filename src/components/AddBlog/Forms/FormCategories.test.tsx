@@ -8,9 +8,10 @@ const setup = (setUpProps = {}, container = shallow) => {
 		categories: ['Travel'],
 		addCategory: jest.fn(),
 		deleteCategory: jest.fn(),
+		categoriesLabel: 'categoriesLabel',
 		...setUpProps,
 	};
-	const wrapper = shallow(<FormCategories {...props} />);
+	const wrapper = container(<FormCategories {...props} />);
 	return { wrapper, props };
 };
 
@@ -23,6 +24,7 @@ describe('FormCategories', () => {
 	it('should call onChange', () => {
 		const { wrapper } = setup();
 		wrapper.find('Input').simulate('change', {
+			preventDefault: jest.fn(),
 			target: {
 				value: 'test',
 			},
@@ -30,28 +32,30 @@ describe('FormCategories', () => {
 		expect(wrapper.state()).toMatchSnapshot();
 	});
 
-	it('should call addCategory on onKeyUp', () => {
+	it('should call addCategory on keydown', () => {
 		const { wrapper, props } = setup();
 		wrapper.find('Input').simulate('change', {
+			preventDefault: jest.fn(),
 			target: {
 				value: 'test',
 			},
 		});
 		wrapper.update();
-		wrapper.find('Input').simulate('keyup', {
+		wrapper.find('Input').simulate('keydown', {
 			keyCode: ENTER_KEY,
 		});
 		expect(props.addCategory).toBeCalledWith('test');
 	});
 
-	it('should not call addCategory on onKeyUp', () => {
+	it('should not call addCategory on keydown', () => {
 		const { wrapper, props } = setup();
 		wrapper.find('Input').simulate('change', {
+			preventDefault: jest.fn(),
 			target: {
 				value: 'test',
 			},
 		});
-		wrapper.find('Input').simulate('keypress', {
+		wrapper.find('Input').simulate('keydown', {
 			keyCode: '1',
 		});
 		expect(props.addCategory).not.toBeCalled();

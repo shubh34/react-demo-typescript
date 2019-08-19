@@ -31,7 +31,6 @@ Object {
     "deleteBlog": [MockFunction],
   },
   "wrapper": <div>
-    Blog Listing
     <Blog
       blog={
         Object {
