@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from 'semantic-ui-react';
+import { Button, ButtonProps } from 'semantic-ui-react';
 interface ICategoryProps {
 	name: string;
 	hasDeleteIcon?: boolean;
@@ -15,7 +15,7 @@ const categoryButtonStyle = {
 const Category: React.FC<ICategoryProps> = props => {
 	const { name, hasDeleteIcon, onCategoryClick } = props;
 
-	const onClick = (e: any, data: any) => {
+	const onClick = (e: React.MouseEvent<HTMLButtonElement>, data: ButtonProps) => {
 		e.preventDefault();
 		if (onCategoryClick) {
 			onCategoryClick(data.name);

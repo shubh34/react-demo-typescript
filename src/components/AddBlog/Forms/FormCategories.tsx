@@ -19,7 +19,7 @@ export class FormCategories extends Component<IFormCategories, IState> {
 		this.handleChange = this.handleChange.bind(this);
 		this.handleDeleteCategory = this.handleDeleteCategory.bind(this);
 
-		this.handleKeyUp = this.handleKeyUp.bind(this);
+		this.handleKeyDown = this.handleKeyDown.bind(this);
 	}
 	handleChange(e: React.ChangeEvent<HTMLInputElement>) {
 		e.preventDefault();
@@ -30,7 +30,7 @@ export class FormCategories extends Component<IFormCategories, IState> {
 	handleDeleteCategory(category: string) {
 		this.props.deleteCategory(category);
 	}
-	handleKeyUp(e: any) {
+	handleKeyDown(e: any) {
 		const key = e.keyCode;
 
 		if ((key === ENTER_KEY || key === COMMA_KEY) && this.state.category.trim()) {
@@ -56,7 +56,7 @@ export class FormCategories extends Component<IFormCategories, IState> {
 					<Input
 						spellCheck
 						placeholder='Enter your content'
-						onKeyDown={this.handleKeyUp}
+						onKeyDown={this.handleKeyDown}
 						onChange={this.handleChange}
 						value={this.state.category}
 					/>

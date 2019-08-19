@@ -26,7 +26,7 @@ export const ViewBlog: React.FC<ReduxType> = props => {
 	const { title, content, categories } = blogDetails!;
 	return (
 		<div>
-			<SectionHeader header={title}> </SectionHeader>
+			<SectionHeader header={title} />
 			<ContentContainer content={content} readMore={false} />
 			<CategoriesContainer categories={categories} hasTagIcon />
 		</div>

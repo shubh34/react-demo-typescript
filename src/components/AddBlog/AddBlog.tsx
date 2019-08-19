@@ -50,7 +50,7 @@ const mapDispatch = (dispatch: Dispatch) => ({
 type ReduxType = ReturnType<typeof mapState> & ReturnType<typeof mapDispatch>;
 
 export class AddBlog extends React.Component<ReduxType & RouteComponentProps> {
-	constructor(props: any) {
+	constructor(props:any) {
 		super(props);
 		this.onFormFieldChange = this.onFormFieldChange.bind(this);
 		this.onAddCategory = this.onAddCategory.bind(this);
