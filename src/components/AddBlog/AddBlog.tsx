@@ -1,7 +1,7 @@
 import './AddBlog.css';
 import React from 'react';
 import { connect } from 'react-redux';
-import { Button, Form} from 'semantic-ui-react';
+import { Button, Form } from 'semantic-ui-react';
 import SectionHeader from '../sharedComponents/SectionHeader/SectionHeader';
 import { IRootState } from '../../store';
 import { isFormValid } from '../../states/validations/selectors';
@@ -90,7 +90,7 @@ export class AddBlog extends React.Component<ReduxType & RouteComponentProps> {
 	render() {
 		const { isFormValid, title, categories, blogContent } = this.props;
 		return (
-			<div className= "add_blog">
+			<div className='add_blog'>
 				<SectionHeader header='Add New Blog' />
 				<Form>
 					<Title title={title} onChange={this.onFormFieldChange} />
@@ -100,7 +100,7 @@ export class AddBlog extends React.Component<ReduxType & RouteComponentProps> {
 						addCategory={this.onAddCategory}
 						deleteCategory={this.onDeleteCategory}
 					/>
-					<Button id="add-blog" type="button" onClick={this.handleAddBlog} disabled={!isFormValid}>
+					<Button id='add-blog' type='button' onClick={this.handleAddBlog} disabled={!isFormValid}>
 						Add Blog
 					</Button>
 				</Form>
