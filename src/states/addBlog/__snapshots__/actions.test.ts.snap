@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`addBlog action should create an action to add blog 1`] = `
+Object {
+  "blog": Object {
+    "categories": Array [
+      "2323",
+      "23213",
+    ],
+    "content": "My Content",
+    "date": "2017-02-14T12:51:48.000Z",
+    "id": "uuid",
+    "title": "My Blog",
+  },
+  "type": "ADD_BLOG",
+}
+`;

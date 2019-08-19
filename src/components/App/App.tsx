@@ -6,7 +6,7 @@ import './App.css';
 import store from '../../store';
 import BlogsListing from '../BlogsListing/BlogsListing';
 import PageHeader from '../PageHeader/PageHeader';
-import CreateBlog from '../CreateBlog/CreateBlog';
+import CreateBlog from '../AddBlog/AddBlog';
 import ViewBlog from '../ViewBlog/ViewBlog';
 
 const App: React.FC = () => {

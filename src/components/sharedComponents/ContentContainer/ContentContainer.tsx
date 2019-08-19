@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-interface contentProps {
-	blogId: string;
+interface IContentProps {
+	blogId ? : string;
 	content: string;
 	readMore: boolean;
 	className?: string;
 }
-const ContentContainer: React.FC<contentProps> = props => {
+const ContentContainer: React.FC<IContentProps> = props => {
 	const { content, readMore, className, blogId } = props;
 	return (
 		<div className={className}>

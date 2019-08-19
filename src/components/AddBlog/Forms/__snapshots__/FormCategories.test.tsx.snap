@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormCategories renders without crashing 1`] = `
+<div>
+  <FormField>
+    <label>
+      Categories
+    </label>
+    <div>
+      <Button
+        as="button"
+        name="Travel"
+      >
+        Travel
+         
+        <Icon
+          as="i"
+          name="delete"
+        />
+      </Button>
+      <Input
+        onChange={[Function]}
+        onKeyUp={[Function]}
+        placeholder="Enter your content"
+        spellCheck={true}
+        type="text"
+        value=""
+      />
+    </div>
+  </FormField>
+</div>
+`;
+
+exports[`FormCategories should call onChange 1`] = `
+Object {
+  "category": "test",
+}
+`;
+
+exports[`FormCategories should call onChange 2`] = `
+Object {
+  "category": "test",
+}
+`;
