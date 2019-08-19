@@ -25,7 +25,7 @@ export const deleteBlog = (blogId: string) => {
     }
 }
 
-export const edit_blog = (blog: IBlog) => {
+export const ediBlog = (blog: IBlog) => {
     return {
         type: EDIT_BLOG,
         blog,

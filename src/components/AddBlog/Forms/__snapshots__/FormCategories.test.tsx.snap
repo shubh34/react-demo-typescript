@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FormCategories renders without crashing 1`] = `
-<div>
+<div
+  className="form-categories"
+>
   <FormField>
     <label>
       Categories
@@ -26,18 +28,18 @@ exports[`FormCategories renders without crashing 1`] = `
         type="text"
         value=""
       />
+      <Message
+        info={true}
+        visible={true}
+      >
+        *Please press spacebar or enter to create category.
+      </Message>
     </div>
   </FormField>
 </div>
 `;
 
 exports[`FormCategories should call onChange 1`] = `
-Object {
-  "category": "test",
-}
-`;
-
-exports[`FormCategories should call onChange 2`] = `
 Object {
   "category": "test",
 }

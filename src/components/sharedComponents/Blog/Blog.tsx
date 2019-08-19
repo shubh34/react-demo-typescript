@@ -44,7 +44,7 @@ const Blog: React.FC<blogProps> = props => {
 						onClick={deleteBlogById}
 					/>
 				</div>
-				<ContentContainer content={content} readMore={readMore} blogId ={id} />
+				<ContentContainer content={content} readMore={readMore} blogId={id} />
 				<CategoriesContainer categories={categories} />
 			</div>
 		</div>
