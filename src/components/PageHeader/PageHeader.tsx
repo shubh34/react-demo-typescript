@@ -1,6 +1,6 @@
 import './PageHeader.css';
 import React from 'react';
-import { NavLink, RouteComponentProps } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Icon, Search } from 'semantic-ui-react';
 import SectionHeader from '../sharedComponents/SectionHeader/SectionHeader';
 
