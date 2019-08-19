@@ -5,8 +5,8 @@ import { IRootState } from '../../store';
 import { deleteBlog } from '../../states/blogs/action';
 import { Dispatch } from 'redux';
 import { getBlogList } from '../../states/blogs/selectors';
-import Blog from '../sharedComponents/Blog/Blog';
-import SectionHeader from '../sharedComponents/SectionHeader/SectionHeader';
+import Blog from '../../sharedComponents/Blog/Blog';
+import SectionHeader from '../../sharedComponents/SectionHeader/SectionHeader';
 
 const mapState = (state: IRootState) => ({
 	blogs: getBlogList(state),
