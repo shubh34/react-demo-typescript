@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reducer validation should add category 1`] = `
+Object {
+  "categories": Array [
+    "test",
+    "Travel",
+  ],
+  "content": "",
+  "title": "",
+}
+`;
+
+exports[`Reducer validation should delete category 1`] = `
+Object {
+  "categories": Array [],
+  "content": "My content",
+  "title": "My Blog",
+}
+`;
+
+exports[`Reducer validation should init add blog form 1`] = `
+Object {
+  "categories": Array [],
+  "content": "",
+  "title": "",
+}
+`;
+
+exports[`Reducer validation should update form field 1`] = `
+Object {
+  "categories": Array [
+    "test",
+  ],
+  "content": "",
+  "title": "My Blogs",
+}
+`;

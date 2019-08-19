@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Form, Input, Message, Button, Icon } from 'semantic-ui-react';
+import { Form, Input, Message } from 'semantic-ui-react';
 import { ENTER_KEY, COMMA_KEY } from '../../../configs/config';
 import CategoriesContainer from '../../sharedComponents/CategoriesContainer/CategoriesContainer';
-
-interface ICategories {
+interface IFormCategories {
 	categories: string[];
 	addCategory: Function;
 	deleteCategory: Function;
@@ -11,8 +10,8 @@ interface ICategories {
 interface IState {
     category: string;
 }
-export class Categories extends Component<ICategories, IState> {
-	constructor(props: ICategories) {
+export class FormCategories extends Component<IFormCategories, IState> {
+	constructor(props: IFormCategories) {
 		
 		super(props);
 		this.state= {
@@ -37,16 +36,16 @@ export class Categories extends Component<ICategories, IState> {
 		const key = e.keyCode;
 	
 		if ((key === ENTER_KEY || key === COMMA_KEY) && this.state.category.trim() ) {
-			this.props.addCategory(this.state.category);
+			this.props.addCategory(this.state.category.trim().replace(',', ''));
 			this.setState({
 				category: '',
 			})
 		}
 	  }
 	render() {
-		const {categories} = this.props;
+		const { categories } = this.props;
 		return (
-			<div>
+			<div className="form-categories">
 			<Form.Field>
 				<label>Categories</label>
 				{!!categories.length && <CategoriesContainer categories={categories} hasDeleteIcon onCategoryClick={this.handleDeleteCategory}/>}
@@ -57,12 +56,12 @@ export class Categories extends Component<ICategories, IState> {
 					
 					onChange={this.handleChange}
 					value={this.state.category}
-				/>	
+				/>
+ 				<Message visible info>*Please press spacebar or enter to create category.</Message>
 			</Form.Field>
-			
-		</div>
+			</div>
 		);
 	}
 }
 
-export default Categories;
+export default FormCategories;

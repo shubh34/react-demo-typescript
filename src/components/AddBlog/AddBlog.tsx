@@ -1,3 +1,4 @@
+import './AddBlog.css';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Button, Form} from 'semantic-ui-react';
@@ -9,9 +10,9 @@ import {
 	updateValidation,
 	resetValidation,
 } from '../../states/validations/actions';
-import Title from './Forms/Title';
-import Categories from './Forms/Categories';
-import BlogContent from './Forms/BlogContent';
+import Title from './Forms/FormTitle';
+import Categories from './Forms/FormCategories';
+import BlogContent from './Forms/FormBlogContent';
 import {
 	initAddBlogForm,
 	updateFormField,
@@ -25,7 +26,7 @@ import {
 } from '../../states/addBlog/selectors';
 import { addBlog } from '../../states/blogs/action';
 import { IBlog } from '../../states/blogs/types';
-import { RouteComponentProps, RouteProps } from 'react-router';
+import { RouteComponentProps } from 'react-router';
 import { Dispatch } from 'redux';
 
 const mapState = (state: IRootState) => ({
@@ -89,7 +90,7 @@ export class AddBlog extends React.Component<ReduxType & RouteComponentProps> {
 	render() {
 		const { isFormValid, title, categories, blogContent } = this.props;
 		return (
-			<div>
+			<div className= "add_blog">
 				<SectionHeader header='Add New Blog' />
 				<Form>
 					<Title title={title} onChange={this.onFormFieldChange} />
