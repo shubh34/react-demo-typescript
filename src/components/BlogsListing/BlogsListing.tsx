@@ -43,7 +43,7 @@ export const BlogsListing: React.FC<ReduxType & WelcomeProps> = ({
 		<div>
 			Blog Listing
 			{blogs.map((blog: any) => (
-				<Blog blog={blog} deleteBlog={deleteBlog} />
+				<Blog key={blog.id} blog={blog} deleteBlog={deleteBlog} />
 			))}
 			<Button onClick={onClick}>Add Blog</Button>
 		</div>

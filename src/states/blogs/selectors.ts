@@ -2,6 +2,7 @@ import moment  from "moment";
 import { IRootState } from "../../store";
 
 import { dateFormat, maxContentCharacterLimit } from "../../configs/config";
+import { IBlog } from "./types";
 
 export const getBlogList = (state: IRootState) => 
     {
@@ -14,12 +15,17 @@ export const getBlogList = (state: IRootState) =>
             };
         });
     }
-export const getBlogById= (state: IRootState, id: string) => {
+export const hasBlogId = (state: IRootState, id: string)  => state.blogs.blogs.some(blog => blog.id === id);
+
+export const getBlogById = (state: IRootState, id: string) => {
     {
-        const blog = state.blogs.blogs.find(blog => blog.id = id);
-        return  {
-            ...blog,
-            date: moment(blog!.date).format(dateFormat),
+        const blog = state.blogs.blogs.find(blog => blog.id === id);
+        if(blog) {
+            return  {
+                ...blog,
+                date: moment(blog.date).format(dateFormat),
+            }
         }
+        return blog;
     }
 }

@@ -1,6 +1,6 @@
 import moment from 'moment';
 import { defaultState } from '../../../tests_helpers/state';
-import { getBlogList } from './selectors';
+import { getBlogList, hasBlogId, getBlogById } from './selectors';
 
 export const state = {
     blogs: {
@@ -25,5 +25,16 @@ export const state = {
 describe('blog selector', () => {
     it('should get blogList', () => {
         expect(getBlogList(defaultState)).toMatchSnapshot();
-    })
+    });
+    describe('hasBlogId', () => {
+        it('should return false', () => {
+            expect(hasBlogId(defaultState, '3')).toBe(false);
+        });
+        it('should get true', () => {
+            expect(hasBlogId(defaultState, '1')).toBe(true);
+        });
+    });
+    it('should get blog when searched by id', () => {
+        expect(getBlogById(defaultState, '1')).toMatchSnapshot();
+    });
 })

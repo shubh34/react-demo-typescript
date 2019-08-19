@@ -2,7 +2,8 @@ import reducer from  './reducer';
 import moment from 'moment';
 
 import { addBlog } from './action';
-
+Date.now = jest.fn(() => 1487076708000);
+jest.mock('node-uuid', () => ({ v1: jest.fn(() => 'uuid') }));
 export const state = {
         blogs: [{
              id: '15',

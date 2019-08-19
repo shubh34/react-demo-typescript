@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { addBlog, deleteBlog, DELETE_BLOG, edit_blog } from './action';
+import { addBlog, deleteBlog, DELETE_BLOG, ediBlog } from './action';
 
 describe('blogs action', () => {
     it('should create add blog action', () => {
@@ -18,7 +18,7 @@ describe('blogs action', () => {
         });
     });
     it('should create edit blog action', () => {
-        expect(edit_blog({
+        expect(ediBlog({
             id: '2',
             title:'Test Blog',
             content: 'Content of blog',
