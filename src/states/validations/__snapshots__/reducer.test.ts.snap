@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reducer validation should reset validation 1`] = `
+Object {
+  "form": Object {
+    "categories": Object {
+      "isValid": false,
+    },
+    "content": Object {
+      "isValid": false,
+    },
+    "title": Object {
+      "isValid": false,
+    },
+  },
+}
+`;
+
+exports[`Reducer validation should update fieldValidation validation 1`] = `
+Object {
+  "form": Object {
+    "categories": Object {
+      "isValid": true,
+    },
+    "content": Object {
+      "isValid": true,
+    },
+    "title": Object {
+      "isValid": false,
+    },
+  },
+}
+`;
+
+exports[`Reducer validation should update fieldValidation validation 2`] = `
+Object {
+  "form": Object {
+    "categories": Object {
+      "isValid": true,
+    },
+    "content": Object {
+      "isValid": true,
+    },
+    "title": Object {
+      "isValid": true,
+    },
+  },
+}
+`;
