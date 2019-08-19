@@ -9,9 +9,9 @@ import {
 	updateValidation,
 	resetValidation,
 } from '../../states/validations/actions';
-import Title from './Forms/Title';
-import Categories from './Forms/Categories';
-import BlogContent from './Forms/BlogContent';
+import Title from './Forms/FormTitle';
+import Categories from './Forms/FormCategories';
+import BlogContent from './Forms/FormBlogContent';
 import {
 	initAddBlogForm,
 	updateFormField,

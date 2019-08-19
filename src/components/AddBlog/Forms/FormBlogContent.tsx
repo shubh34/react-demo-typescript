@@ -1,12 +1,12 @@
 import React from 'react';
-import { Form, TextArea } from 'semantic-ui-react';
+import { Form, TextArea, TextAreaProps } from 'semantic-ui-react';
 
-interface IBlogContent {
+interface IFormBlogContent {
 	blogContent: string;
 	onChange: Function;
 }
-const BlogContent: React.FC<IBlogContent> = ({ blogContent, onChange }) => {
-	const onBlogChange = (e: React.FormEvent<HTMLTextAreaElement>, data: any) => {
+const FormBlogContent: React.FC<IFormBlogContent> = ({ blogContent, onChange }) => {
+	const onBlogChange = (e: React.FormEvent<HTMLTextAreaElement>, data: TextAreaProps) => {
 		e.preventDefault();
 		onChange('content', data.value);
 	};
@@ -25,4 +25,4 @@ const BlogContent: React.FC<IBlogContent> = ({ blogContent, onChange }) => {
 	);
 };
 
-export default BlogContent;
+export default FormBlogContent;

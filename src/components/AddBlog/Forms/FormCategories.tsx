@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Form, Input, Button, Icon } from 'semantic-ui-react';
 import { ENTER_KEY, COMMA_KEY } from '../../../configs/config';
-interface ICategories {
+interface IFormCategories {
 	categories: string[];
 	addCategory: Function;
 	deleteCategory: Function;
@@ -9,8 +9,8 @@ interface ICategories {
 interface IState {
     category: string;
 }
-export class Categories extends Component<ICategories, IState> {
-	constructor(props: ICategories) {
+export class FormCategories extends Component<IFormCategories, IState> {
+	constructor(props: IFormCategories) {
 		
 		super(props);
 		this.state= {
@@ -26,6 +26,7 @@ export class Categories extends Component<ICategories, IState> {
 		})
 	}
 	handleKeyUp(e: any) {
+		console.log('testsjkfgjkhdfjkhgjkdhfjkghdjkf')
 		const key = e.keyCode;
 	
 		if ((key === ENTER_KEY || key === COMMA_KEY) && this.state.category ) {
@@ -59,4 +60,4 @@ export class Categories extends Component<ICategories, IState> {
 	}
 }
 
-export default Categories;
+export default FormCategories;

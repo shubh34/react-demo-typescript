@@ -1,11 +1,12 @@
 import React from 'react';
 import { Form, Input } from 'semantic-ui-react';
 
-interface ITitleProps {
+interface IFormTitle {
 	title: string;
 	onChange: Function;
+	
 }
-const Title: React.FC<ITitleProps> = ({ title, onChange }) => {
+const FormTitle: React.FC<IFormTitle> = ({ title, onChange }) => {
 	const onTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		onChange(e.target.name, e.target.value);
 	};
@@ -24,4 +25,4 @@ const Title: React.FC<ITitleProps> = ({ title, onChange }) => {
 	);
 };
 
-export default Title;
+export default FormTitle;
