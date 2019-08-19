@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div
+  className="date_container"
+>
+  <label
+    className="date_container_label"
+  >
+    <span
+      className="date_container_meta"
+    >
+      Date: 
+    </span>
+    <strong>
+      23 Jan 1992
+    </strong>
+  </label>
+</div>
+`;

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BackButton renders without crashing 1`] = `
+<Button
+  as="button"
+  name="back"
+  onClick={[Function]}
+  size="large"
+  style={
+    Object {
+      "background": "transparent",
+      "color": "#4183c4",
+      "paddingLeft": "0px",
+    }
+  }
+  type="button"
+>
+  <Icon
+    as="i"
+    name="angle left"
+  />
+   Back
+</Button>
+`;

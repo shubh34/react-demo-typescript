@@ -4,6 +4,9 @@ exports[`Add Blog should render add blog 1`] = `
 <div
   className="add_blog"
 >
+  <BackButton
+    onClick={[Function]}
+  />
   <SectionHeader
     header="Add New Blog"
   />
@@ -36,6 +39,13 @@ exports[`Add Blog should render add blog 1`] = `
       disabled={true}
       id="add-blog"
       onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "#4183c4",
+          "color": "#eeeeee",
+          "padding": "8px 16px",
+        }
+      }
       type="button"
     >
        Add Blog

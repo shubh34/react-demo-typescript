@@ -31,6 +31,9 @@ Object {
     "deleteBlog": [MockFunction],
   },
   "wrapper": <div>
+    <SectionHeader
+      header="Blogs"
+    />
     <Blog
       blog={
         Object {
@@ -65,12 +68,6 @@ Object {
       deleteBlog={[MockFunction]}
       key="2"
     />
-    <Button
-      as="button"
-      onClick={[Function]}
-    >
-      Add Blog
-    </Button>
   </div>,
 }
 `;
