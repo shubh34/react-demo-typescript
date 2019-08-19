@@ -1,3 +1,4 @@
+import './AddBlog.css';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Button, Form, Message } from 'semantic-ui-react';
@@ -94,9 +95,9 @@ export class AddBlog extends React.Component<ReduxType & RouteComponentProps > {
 			blogContent,
 		} = this.props;
 		return (
-			<div>
+			<div className= "add_blog">
 				<SectionHeader header='Add New Blog' />
-				<Form success>
+				<Form>
 					<Title title={title} onChange={this.onFormFieldChange} />
 					<BlogContent blogContent={blogContent} onChange={this.onFormFieldChange} />
 					<Categories
@@ -104,7 +105,6 @@ export class AddBlog extends React.Component<ReduxType & RouteComponentProps > {
 						addCategory={this.onAddCategory}
 						deleteCategory={deleteCategory}
 					/>
-					 <Message success header='Form Completed' content="You're all signed up for the newsletter" />
 					<Button type='submit' onClick ={this.handleAddBlog} disabled={!isFormValid}>
 						Add Blog
 					</Button>
