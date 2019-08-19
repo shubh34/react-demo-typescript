@@ -1,5 +1,5 @@
 import reducer from  './reducer';
-import { formValid } from '../../../tests_helpers/validation';
+import { formValid } from '../../../__mock__/validation';
 import { resetValidation, updateValidation, initValidation } from './actions';
 
 describe('Reducer validation', () => {

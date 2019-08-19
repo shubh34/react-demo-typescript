@@ -1,6 +1,6 @@
 import reducer from  './reducer';
 import {  initAddBlogForm, updateFormField, addCategory, deleteCategory } from './actions';
-import { addBlogDefaultState } from '../../../tests_helpers/AddBlog';
+import { addBlogDefaultState } from '../../../__mock__/AddBlog';
 
 describe('Reducer validation', () => {
     it('should init add blog form', () => {
