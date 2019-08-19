@@ -1,0 +1,11 @@
+.date_container {
+    min-width: 150px;
+}
+.date_container_label {
+    line-height: 30px;
+}
+@media only screen and (min-width: 768px) {
+    .date_container_meta {
+        display: none;
+    }
+  }
