@@ -19,7 +19,7 @@ export const ViewBlog: React.FC<ReduxType & RouteComponentProps> = props => {
 	const { blogDetails, hasBlog } = props;
 
 	const renderNoBlogFound = () => {
-		return <div> No Blog found</div>;
+		return <SectionHeader header="Sorry!! we can't find this blog. This blog might be deleted." />;
 	};
 
 	if (!hasBlog) {
