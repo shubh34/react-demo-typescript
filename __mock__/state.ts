@@ -3,7 +3,7 @@ import { initiaValidation, formValid } from './validation';
 import { IRootState } from '../src/store';
 
 export const defaultState: IRootState = {
-    blogs: {
+    blogListing: {
         blogs: rawBlogLists
      },
      validation: initiaValidation,
