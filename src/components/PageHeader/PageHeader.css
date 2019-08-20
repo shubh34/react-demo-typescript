@@ -29,9 +29,10 @@
     color:white;
   }
   @media only screen and (min-width: 768px) {
-    .nav_search_box {
+    /* Remove this when searchnis implemented  */
+    /* .nav_search_box {
         display: inline-block;
-    }
+    } */
   }
   ul {
     list-style-type: none;
