@@ -34,3 +34,4 @@ export const blogListsForListing: any =
     readMore: false,
     content: 'Lorem ipsumutpat consequat mus.'
 }];
+
