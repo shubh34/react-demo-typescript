@@ -20,7 +20,7 @@ const FormBlogContent: React.FC<IFormBlogContent> = ({
 			<label>{blogContentLabel}</label>
 			<TextArea
 				rows={25}
-				spellcheck
+				spellCheck
 				name='content'
 				placeholder='Enter your content'
 				onChange={onBlogChange}
