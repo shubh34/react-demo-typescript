@@ -11,7 +11,7 @@ exports[`FormBlogContent renders without crashing 1`] = `
     onChange={[Function]}
     placeholder="Enter your content"
     rows={25}
-    spellcheck={true}
+    spellCheck={true}
     value="My Blog content"
   />
 </FormField>

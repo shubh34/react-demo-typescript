@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ViewBlog renders Blog not found  1`] = `
-<div>
-   No Blog found
-</div>
+<SectionHeader
+  header="Sorry!! we can't find this blog. This blog might be deleted."
+/>
 `;
 
 exports[`ViewBlog renders without crashing 1`] = `
