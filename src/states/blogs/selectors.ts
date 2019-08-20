@@ -5,7 +5,7 @@ import { dateFormat, maxContentCharacterLimit } from "../../configs/config";
 
 export const getBlogList = (state: IRootState) => 
     {
-        return state.blogs.blogs.map(blog => {
+        return state.blogListing.blogs.map(blog => {
             return {
                 ...blog,
                 date: moment(blog.date).format(dateFormat),
@@ -14,11 +14,11 @@ export const getBlogList = (state: IRootState) =>
             };
         });
     }
-export const hasBlogId = (state: IRootState, id: string)  => state.blogs.blogs.some(blog => blog.id === id);
+export const hasBlogId = (state: IRootState, id: string)  => state.blogListing.blogs.some(blog => blog.id === id);
 
 export const getBlogById = (state: IRootState, id: string) => {
     {
-        const blog = state.blogs.blogs.find(blog => blog.id === id);
+        const blog = state.blogListing.blogs.find(blog => blog.id === id);
         if(blog) {
             return  {
                 ...blog,
