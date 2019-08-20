@@ -11,6 +11,7 @@ const categoryButtonStyle = {
 	color: '#eeeeee',
 	borderRadius: '48px',
 	padding: '8px 16px',
+	margin: '8px 8px 8px 0px',
 };
 const Category: React.FC<ICategoryProps> = props => {
 	const { name, hasDeleteIcon, onCategoryClick } = props;
